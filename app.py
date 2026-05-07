@@ -8,7 +8,7 @@ from engine.save_load import save_game, load_game, list_saves
 from engine.save_codes import encode_save, decode_save
 from engine.supabase_client import is_configured as cloud_is_configured
 from ui import auth as auth_ui
-from ui import dashboard, parliament_view, economy_view, events_view, regions_view, media_view, election_view, cabinet_view, calendar_view, how_to_play, hud
+from ui import dashboard, parliament_view, economy_view, events_view, regions_view, media_view, election_view, cabinet_view, calendar_view, how_to_play, hud, audio
 from ui.styles import inject_css
 
 st.set_page_config(
@@ -31,14 +31,76 @@ def render_main_menu():
             st.rerun()
         return
 
+    audio.render_music_player()
     st.markdown("""
-    <div style="text-align:center;padding:3rem 2rem">
-      <h1 style="font-size:2.8rem;color:#3B82F6">🏛️ Political Simulator</h1>
-      <h2 style="font-size:1.6rem;color:#cbd5e1;margin-top:0">Republic in Crisis</h2>
-      <p style="color:#cbd5e1;font-size:1.05rem;max-width:650px;margin:1.5rem auto">
-        Govern Pustinyakovo day by day. Plan ahead, lobby individual MPs, push bills through 5 parliamentary stages,
-        manage your fragile coalition, and survive crises. Every day brings 4 Action Points to spend wisely.
+    <style>
+      @keyframes titleGlow {
+        0%, 100% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.2); }
+        50% { text-shadow: 0 0 30px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4); }
+      }
+      @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes shimmer {
+        0% { background-position: -1000px 0; }
+        100% { background-position: 1000px 0; }
+      }
+      .splash-title {
+        font-family: 'Cinzel', serif !important;
+        font-size: 3.2rem !important;
+        font-weight: 700 !important;
+        background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899, #3B82F6);
+        background-size: 1000px 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: titleGlow 3s ease-in-out infinite, shimmer 8s linear infinite;
+        margin: 0;
+        letter-spacing: 0.05em;
+      }
+      .splash-subtitle {
+        font-family: 'Cinzel', serif !important;
+        font-size: 1.5rem !important;
+        color: #cbd5e1 !important;
+        letter-spacing: 0.3em !important;
+        text-transform: uppercase;
+        margin: 0.5rem 0 1rem !important;
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+      }
+      .splash-tagline {
+        color: #94a3b8 !important;
+        font-size: 1.05rem;
+        max-width: 700px;
+        margin: 1.5rem auto !important;
+        line-height: 1.6;
+        animation: fadeInUp 0.8s ease-out 0.4s both;
+      }
+      .splash-icons {
+        font-size: 1.8rem;
+        letter-spacing: 1rem;
+        margin: 0.5rem 0;
+        animation: fadeInUp 0.8s ease-out 0.5s both;
+        opacity: 0.7;
+      }
+    </style>
+    <div style="text-align:center;padding:2.5rem 2rem 1rem">
+      <div class="splash-icons">🏛️ ⚖️ 📜 🗳️ 🎤</div>
+      <h1 class="splash-title">POLITICAL SIMULATOR</h1>
+      <h2 class="splash-subtitle">Republic in Crisis</h2>
+      <p class="splash-tagline">
+        The Republic of Pustinyakovo stands at the edge.
+        Inflation eats wages, corruption rots institutions, the opposition smells blood,
+        and your fragile coalition holds parliament by just <b style="color:#FBBF24">4 seats</b>.
       </p>
+      <p class="splash-tagline" style="animation-delay:0.6s">
+        You are <b style="color:#3B82F6">Prime Minister Elena Markova</b>.
+        Survive. Reform. Win re-election. Or watch the Republic collapse on your watch.
+      </p>
+      <div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-top:1.5rem;animation:fadeInUp 0.8s ease-out 0.7s both">
+        <div style="text-align:center"><div style="font-size:1.6rem">🤝</div><div style="color:#94a3b8;font-size:0.85rem">Lobby 240 MPs</div></div>
+        <div style="text-align:center"><div style="font-size:1.6rem">📜</div><div style="color:#94a3b8;font-size:0.85rem">Pass 20 bills</div></div>
+        <div style="text-align:center"><div style="font-size:1.6rem">🌍</div><div style="color:#94a3b8;font-size:0.85rem">Navigate the EU</div></div>
+        <div style="text-align:center"><div style="font-size:1.6rem">🚨</div><div style="color:#94a3b8;font-size:0.85rem">Survive 35+ crises</div></div>
+        <div style="text-align:center"><div style="font-size:1.6rem">🗳️</div><div style="color:#94a3b8;font-size:0.85rem">Win the next vote</div></div>
+      </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -175,6 +237,14 @@ def render_sidebar(state):
     if event_count > 0:
         st.sidebar.error(f"🚨 {event_count} Crisis Active!")
 
+    col_m1, col_m2 = st.sidebar.columns(2)
+    with col_m1:
+        audio.music_toggle_button()
+    with col_m2:
+        if st.button("🔊+", key="vol_up", help="Volume up"):
+            st.session_state["music_volume"] = min(100, st.session_state.get("music_volume", 30) + 15)
+            st.rerun()
+
     st.sidebar.markdown("### Navigation")
     views = [
         ("🏠", "Dashboard", "dashboard"),
@@ -265,6 +335,17 @@ def main():
         return
 
     render_sidebar(state)
+    audio.render_music_player()
+
+    if state.pop("_trigger_confetti", False):
+        audio.fire_confetti()
+        st.toast("🎉 Bill passed parliament!", icon="✅")
+    triggered_sfx = state.pop("_trigger_sfx", None)
+    if triggered_sfx:
+        audio.play_sfx(triggered_sfx)
+    toast_msg = state.pop("_toast_msg", None)
+    if toast_msg:
+        st.toast(toast_msg)
 
     view = st.session_state.get("view", "dashboard")
 
@@ -295,6 +376,7 @@ def main():
         dashboard.render(state)
 
     st.session_state["game"] = state
+    audio.render_pending_sfx()
 
 
 if __name__ == "__main__":
