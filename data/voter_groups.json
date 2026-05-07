@@ -1,0 +1,162 @@
+{
+  "urban_liberals": {
+    "id": "urban_liberals",
+    "name": "Urban Liberals",
+    "size": 14,
+    "base_turnout": 58,
+    "priorities": ["democracy", "anti_corruption", "eu_integration", "social_rights"],
+    "sensitivity": {
+      "corruption_negative": 0.9,
+      "democracy_negative": 0.85,
+      "economy_positive": 0.45,
+      "nationalism_negative": 0.8,
+      "eu_relations_positive": 0.7
+    },
+    "party_affinity": {"democratic_alliance": 0.7, "green_future": 0.55, "liberal_democrats": 0.4},
+    "protest_likelihood": 68,
+    "volatility": 45
+  },
+  "rural_conservatives": {
+    "id": "rural_conservatives",
+    "name": "Rural Conservatives",
+    "size": 18,
+    "base_turnout": 48,
+    "priorities": ["stability", "agriculture_support", "tradition", "local_services"],
+    "sensitivity": {
+      "corruption_negative": 0.4,
+      "economy_positive": 0.7,
+      "nationalism_positive": 0.55,
+      "local_machine_positive": 0.8
+    },
+    "party_affinity": {"citizens_union": 0.65, "national_front": 0.45},
+    "protest_likelihood": 22,
+    "volatility": 28
+  },
+  "industrial_workers": {
+    "id": "industrial_workers",
+    "name": "Industrial Workers",
+    "size": 16,
+    "base_turnout": 44,
+    "priorities": ["jobs", "wages", "pensions", "factory_protection"],
+    "sensitivity": {
+      "unemployment_negative": 0.9,
+      "wages_positive": 0.85,
+      "factory_closure_negative": 0.95,
+      "populism_positive": 0.6
+    },
+    "party_affinity": {"social_democrats": 0.5, "national_front": 0.55, "citizens_union": 0.35},
+    "protest_likelihood": 62,
+    "volatility": 65
+  },
+  "public_sector_employees": {
+    "id": "public_sector_employees",
+    "name": "Public Sector Employees",
+    "size": 12,
+    "base_turnout": 62,
+    "priorities": ["public_wages", "job_security", "services_funding", "anti_austerity"],
+    "sensitivity": {
+      "budget_cuts_negative": 0.9,
+      "public_wages_positive": 0.85,
+      "privatization_negative": 0.75
+    },
+    "party_affinity": {"social_democrats": 0.6, "democratic_alliance": 0.4},
+    "protest_likelihood": 55,
+    "volatility": 38
+  },
+  "small_business_owners": {
+    "id": "small_business_owners",
+    "name": "Small Business Owners",
+    "size": 10,
+    "base_turnout": 55,
+    "priorities": ["low_taxes", "less_bureaucracy", "rule_of_law", "anti_corruption"],
+    "sensitivity": {
+      "corruption_negative": 0.7,
+      "taxes_negative": 0.8,
+      "economic_growth_positive": 0.75,
+      "inflation_negative": 0.7
+    },
+    "party_affinity": {"liberal_democrats": 0.6, "democratic_alliance": 0.45, "citizens_union": 0.5},
+    "protest_likelihood": 30,
+    "volatility": 52
+  },
+  "young_voters": {
+    "id": "young_voters",
+    "name": "Young Voters",
+    "size": 14,
+    "base_turnout": 35,
+    "priorities": ["jobs", "housing", "eu_membership", "climate", "democracy"],
+    "sensitivity": {
+      "corruption_negative": 0.8,
+      "youth_unemployment_negative": 0.9,
+      "democracy_negative": 0.85,
+      "climate_positive": 0.65
+    },
+    "party_affinity": {"democratic_alliance": 0.55, "green_future": 0.65, "national_front": 0.40},
+    "protest_likelihood": 72,
+    "volatility": 75
+  },
+  "pensioners": {
+    "id": "pensioners",
+    "name": "Pensioners",
+    "size": 20,
+    "base_turnout": 72,
+    "priorities": ["pension_value", "healthcare", "stability", "safety"],
+    "sensitivity": {
+      "inflation_negative": 0.85,
+      "pension_cuts_negative": 0.95,
+      "healthcare_positive": 0.8,
+      "stability_positive": 0.7
+    },
+    "party_affinity": {"citizens_union": 0.55, "social_democrats": 0.6, "national_front": 0.40},
+    "protest_likelihood": 18,
+    "volatility": 32
+  },
+  "ethnic_minorities": {
+    "id": "ethnic_minorities",
+    "name": "Ethnic Minorities",
+    "size": 8,
+    "base_turnout": 55,
+    "priorities": ["minority_rights", "anti_discrimination", "economic_development", "eu_funds"],
+    "sensitivity": {
+      "nationalism_negative": 0.9,
+      "minority_rights_positive": 0.85,
+      "corruption_negative": 0.6,
+      "ethnic_tension_negative": 0.9
+    },
+    "party_affinity": {"social_democrats": 0.65, "democratic_alliance": 0.45},
+    "protest_likelihood": 52,
+    "volatility": 45
+  },
+  "nationalists": {
+    "id": "nationalists",
+    "name": "Nationalist Voters",
+    "size": 10,
+    "base_turnout": 58,
+    "priorities": ["national_sovereignty", "anti_immigration", "traditional_values", "anti_eu"],
+    "sensitivity": {
+      "nationalism_positive": 0.9,
+      "eu_negative": 0.8,
+      "migration_negative": 0.85,
+      "crime_negative": 0.75
+    },
+    "party_affinity": {"national_front": 0.8, "citizens_union": 0.40},
+    "protest_likelihood": 45,
+    "volatility": 40
+  },
+  "pro_european_middle_class": {
+    "id": "pro_european_middle_class",
+    "name": "Pro-European Middle Class",
+    "size": 8,
+    "base_turnout": 65,
+    "priorities": ["eu_membership", "rule_of_law", "economic_growth", "anti_corruption"],
+    "sensitivity": {
+      "eu_relations_positive": 0.85,
+      "corruption_negative": 0.8,
+      "democracy_positive": 0.75,
+      "economic_growth_positive": 0.7
+    },
+    "party_affinity": {"democratic_alliance": 0.7, "liberal_democrats": 0.6, "green_future": 0.5},
+    "protest_likelihood": 55,
+    "volatility": 48
+  }
+}

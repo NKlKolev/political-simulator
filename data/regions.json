@@ -1,0 +1,365 @@
+{
+  "capital": {
+    "id": "capital",
+    "name": "Pustgrad (Capital)",
+    "short": "PG",
+    "population": 1200000,
+    "seats": 52,
+    "type": "capital",
+    "economy": {
+      "gdp_per_capita": 82,
+      "unemployment": 8.2,
+      "poverty": 18,
+      "industry_share": 15,
+      "services_share": 75,
+      "agriculture_share": 2,
+      "tourism_share": 8,
+      "main_sectors": ["technology", "finance", "public_sector", "retail"]
+    },
+    "social": {
+      "education": 78,
+      "healthcare": 72,
+      "infrastructure": 74,
+      "urbanization": 95,
+      "youth_share": 28,
+      "pensioner_share": 18
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 42,
+        "citizens_union": 18,
+        "national_front": 14,
+        "social_democrats": 8,
+        "green_future": 10,
+        "liberal_democrats": 5,
+        "other": 3
+      },
+      "turnout": 52,
+      "corruption": 45,
+      "unrest": 42,
+      "protest_potential": 68,
+      "media_access": 92,
+      "local_elite_power": 58
+    },
+    "problems": ["housing_crisis", "traffic", "air_pollution", "inequality"],
+    "color": "#3B82F6"
+  },
+  "northern_industry": {
+    "id": "northern_industry",
+    "name": "Northern Industry",
+    "short": "NI",
+    "population": 820000,
+    "seats": 36,
+    "type": "industrial",
+    "economy": {
+      "gdp_per_capita": 52,
+      "unemployment": 18.4,
+      "poverty": 38,
+      "industry_share": 62,
+      "services_share": 28,
+      "agriculture_share": 6,
+      "tourism_share": 2,
+      "main_sectors": ["mining", "steel", "chemical", "manufacturing"]
+    },
+    "social": {
+      "education": 52,
+      "healthcare": 58,
+      "infrastructure": 45,
+      "urbanization": 68,
+      "youth_share": 22,
+      "pensioner_share": 26
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 18,
+        "citizens_union": 28,
+        "national_front": 32,
+        "social_democrats": 15,
+        "green_future": 3,
+        "liberal_democrats": 2,
+        "other": 2
+      },
+      "turnout": 45,
+      "corruption": 68,
+      "unrest": 72,
+      "protest_potential": 78,
+      "media_access": 48,
+      "local_elite_power": 75
+    },
+    "problems": ["factory_closures", "unemployment", "pollution", "infrastructure_decay", "union_conflict"],
+    "color": "#6B7280"
+  },
+  "southern_fields": {
+    "id": "southern_fields",
+    "name": "Southern Fields",
+    "short": "SF",
+    "population": 650000,
+    "seats": 28,
+    "type": "agricultural",
+    "economy": {
+      "gdp_per_capita": 42,
+      "unemployment": 21.2,
+      "poverty": 45,
+      "industry_share": 18,
+      "services_share": 22,
+      "agriculture_share": 52,
+      "tourism_share": 4,
+      "main_sectors": ["wheat", "sunflower", "livestock", "wine"]
+    },
+    "social": {
+      "education": 45,
+      "healthcare": 42,
+      "infrastructure": 38,
+      "urbanization": 38,
+      "youth_share": 18,
+      "pensioner_share": 34
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 14,
+        "citizens_union": 42,
+        "national_front": 28,
+        "social_democrats": 10,
+        "green_future": 2,
+        "liberal_democrats": 1,
+        "other": 3
+      },
+      "turnout": 42,
+      "corruption": 74,
+      "unrest": 48,
+      "protest_potential": 45,
+      "media_access": 32,
+      "local_elite_power": 82
+    },
+    "problems": ["rural_depopulation", "drought_risk", "low_wages", "poor_roads", "land_consolidation"],
+    "color": "#D97706"
+  },
+  "eastern_border": {
+    "id": "eastern_border",
+    "name": "Eastern Border",
+    "short": "EB",
+    "population": 420000,
+    "seats": 18,
+    "type": "border",
+    "economy": {
+      "gdp_per_capita": 45,
+      "unemployment": 19.8,
+      "poverty": 42,
+      "industry_share": 28,
+      "services_share": 35,
+      "agriculture_share": 22,
+      "tourism_share": 5,
+      "main_sectors": ["border_trade", "logistics", "agriculture", "small_manufacturing"]
+    },
+    "social": {
+      "education": 48,
+      "healthcare": 45,
+      "infrastructure": 42,
+      "urbanization": 45,
+      "youth_share": 20,
+      "pensioner_share": 28
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 16,
+        "citizens_union": 25,
+        "national_front": 38,
+        "social_democrats": 8,
+        "green_future": 4,
+        "liberal_democrats": 3,
+        "other": 6
+      },
+      "turnout": 48,
+      "corruption": 70,
+      "unrest": 62,
+      "protest_potential": 58,
+      "media_access": 38,
+      "local_elite_power": 72,
+      "foreign_influence": 65
+    },
+    "problems": ["migration_pressure", "smuggling", "foreign_influence", "poor_border_infrastructure"],
+    "color": "#DC2626"
+  },
+  "western_coast": {
+    "id": "western_coast",
+    "name": "Western Coast",
+    "short": "WC",
+    "population": 580000,
+    "seats": 25,
+    "type": "tourist",
+    "economy": {
+      "gdp_per_capita": 68,
+      "unemployment": 11.2,
+      "poverty": 24,
+      "industry_share": 12,
+      "services_share": 58,
+      "agriculture_share": 8,
+      "tourism_share": 32,
+      "main_sectors": ["tourism", "hospitality", "fishing", "trade"]
+    },
+    "social": {
+      "education": 62,
+      "healthcare": 62,
+      "infrastructure": 65,
+      "urbanization": 62,
+      "youth_share": 26,
+      "pensioner_share": 22
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 32,
+        "citizens_union": 28,
+        "national_front": 18,
+        "social_democrats": 8,
+        "green_future": 8,
+        "liberal_democrats": 5,
+        "other": 1
+      },
+      "turnout": 48,
+      "corruption": 55,
+      "unrest": 38,
+      "protest_potential": 42,
+      "media_access": 65,
+      "local_elite_power": 60
+    },
+    "problems": ["seasonal_unemployment", "overdevelopment", "environmental_damage", "foreign_real_estate"],
+    "color": "#0EA5E9"
+  },
+  "mountain_region": {
+    "id": "mountain_region",
+    "name": "Mountain Region",
+    "short": "MR",
+    "population": 380000,
+    "seats": 16,
+    "type": "rural",
+    "economy": {
+      "gdp_per_capita": 38,
+      "unemployment": 24.5,
+      "poverty": 52,
+      "industry_share": 22,
+      "services_share": 28,
+      "agriculture_share": 35,
+      "tourism_share": 12,
+      "main_sectors": ["forestry", "livestock", "winter_tourism", "crafts"]
+    },
+    "social": {
+      "education": 42,
+      "healthcare": 38,
+      "infrastructure": 32,
+      "urbanization": 28,
+      "youth_share": 16,
+      "pensioner_share": 38
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 12,
+        "citizens_union": 38,
+        "national_front": 32,
+        "social_democrats": 12,
+        "green_future": 2,
+        "liberal_democrats": 2,
+        "other": 2
+      },
+      "turnout": 38,
+      "corruption": 78,
+      "unrest": 52,
+      "protest_potential": 38,
+      "media_access": 28,
+      "local_elite_power": 88
+    },
+    "problems": ["depopulation", "healthcare_access", "road_closure_winters", "youth_emigration"],
+    "color": "#6B7280"
+  },
+  "minority_valley": {
+    "id": "minority_valley",
+    "name": "Minority Valley",
+    "short": "MV",
+    "population": 340000,
+    "seats": 15,
+    "type": "minority",
+    "economy": {
+      "gdp_per_capita": 35,
+      "unemployment": 28.5,
+      "poverty": 58,
+      "industry_share": 18,
+      "services_share": 25,
+      "agriculture_share": 42,
+      "tourism_share": 3,
+      "main_sectors": ["tobacco", "agriculture", "textiles", "subsistence"]
+    },
+    "social": {
+      "education": 38,
+      "healthcare": 35,
+      "infrastructure": 30,
+      "urbanization": 35,
+      "youth_share": 30,
+      "pensioner_share": 22,
+      "ethnic_minority_share": 68
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 18,
+        "citizens_union": 12,
+        "national_front": 8,
+        "social_democrats": 48,
+        "green_future": 8,
+        "liberal_democrats": 2,
+        "other": 4
+      },
+      "turnout": 55,
+      "corruption": 72,
+      "unrest": 58,
+      "protest_potential": 62,
+      "media_access": 28,
+      "local_elite_power": 80,
+      "ethnic_tension": 55
+    },
+    "problems": ["discrimination", "extreme_poverty", "low_education", "patronage_networks", "ethnic_tension"],
+    "color": "#8B5CF6"
+  },
+  "port_industrial": {
+    "id": "port_industrial",
+    "name": "Port & Trade Zone",
+    "short": "PT",
+    "population": 610000,
+    "seats": 50,
+    "type": "mixed",
+    "economy": {
+      "gdp_per_capita": 65,
+      "unemployment": 12.8,
+      "poverty": 26,
+      "industry_share": 38,
+      "services_share": 48,
+      "agriculture_share": 5,
+      "tourism_share": 8,
+      "main_sectors": ["shipping", "logistics", "manufacturing", "trade", "fishing"]
+    },
+    "social": {
+      "education": 62,
+      "healthcare": 65,
+      "infrastructure": 68,
+      "urbanization": 78,
+      "youth_share": 25,
+      "pensioner_share": 20
+    },
+    "politics": {
+      "party_support": {
+        "democratic_alliance": 28,
+        "citizens_union": 28,
+        "national_front": 20,
+        "social_democrats": 12,
+        "green_future": 5,
+        "liberal_democrats": 5,
+        "other": 2
+      },
+      "turnout": 50,
+      "corruption": 62,
+      "unrest": 45,
+      "protest_potential": 52,
+      "media_access": 72,
+      "local_elite_power": 65
+    },
+    "problems": ["port_corruption", "organized_crime", "housing_shortage", "labor_exploitation"],
+    "color": "#0F766E"
+  }
+}
