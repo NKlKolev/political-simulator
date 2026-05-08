@@ -142,8 +142,11 @@ def _conduct_final_vote(state, bill):
 
     if passed:
         _pass_bill(state, bill, result)
+        state["_trigger_confetti"] = True
+        state["_trigger_sfx"] = "vote_pass"
     else:
         _fail_bill(state, bill, result)
+        state["_trigger_sfx"] = "vote_fail"
 
 
 def _pass_bill(state, bill, result):

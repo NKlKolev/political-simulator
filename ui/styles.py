@@ -55,12 +55,121 @@ def get_trend_arrow(current, target=50):
 
 
 CSS = """
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-    /* Force dark background everywhere — game requires dark theme */
-    html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"], .main, .block-container {
-        background-color: #0f172a !important;
-        color: #f1f5f9 !important;
+    /* Hide Streamlit chrome for game-like feel — but keep sidebar toggle */
+    #MainMenu { visibility: hidden !important; }
+    footer { visibility: hidden !important; }
+    .stDeployButton { display: none !important; }
+    [data-testid="stToolbar"] { display: none !important; }
+    [data-testid="stDecoration"] { display: none !important; }
+    .reportview-container .main footer { visibility: hidden !important; }
+    /* Keep header structure (so sidebar toggle works) but make it transparent */
+    header[data-testid="stHeader"] {
+        background: transparent !important;
+        height: 2.5rem !important;
     }
+    /* Sidebar collapse/expand button MUST stay visible */
+    [data-testid="collapsedControl"],
+    [data-testid="stSidebarCollapsedControl"],
+    button[kind="header"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 999999 !important;
+    }
+
+    /* Tighter top padding now that header is hidden */
+    .block-container {
+        padding-top: 1rem !important;
+        max-width: 1400px !important;
+    }
+
+    /* Game fonts */
+    html, body, .stApp, * {
+        font-family: 'Inter', 'Helvetica Neue', sans-serif !important;
+    }
+    h1, h2, h3, .game-title {
+        font-family: 'Cinzel', 'Georgia', serif !important;
+        letter-spacing: 0.02em !important;
+    }
+
+    /* Background — subtle radial gradient + dotted pattern */
+    html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"], .main, .block-container {
+        background-color: #0a0f1a !important;
+        background-image:
+            radial-gradient(circle at 20% 0%, rgba(59, 130, 246, 0.08), transparent 50%),
+            radial-gradient(circle at 80% 100%, rgba(139, 92, 246, 0.06), transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.5), transparent 70%);
+        color: #f1f5f9 !important;
+        background-attachment: fixed !important;
+    }
+    .stApp::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px);
+        background-size: 20px 20px;
+        z-index: 0;
+    }
+
+    /* Smooth fade-in for content */
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .block-container > div:first-child > div:first-child { animation: fadeIn 0.35s ease-out; }
+
+    /* Pulse animation for critical resources */
+    @keyframes pulseGlow {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+        50% { box-shadow: 0 0 12px 4px rgba(239, 68, 68, 0.6); }
+    }
+    .pulse-critical { animation: pulseGlow 2s ease-in-out infinite; }
+
+    /* Button polish: hover lift + glow */
+    .stButton button {
+        transition: all 0.15s ease !important;
+        font-weight: 500 !important;
+    }
+    .stButton button:hover:not(:disabled) {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+        border-color: #3B82F6 !important;
+    }
+    .stButton button[kind="primary"]:hover:not(:disabled) {
+        box-shadow: 0 4px 16px rgba(59, 130, 246, 0.5) !important;
+    }
+
+    /* Hover lift for cards */
+    .game-card, [data-testid="stExpander"] {
+        transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+    }
+    .game-card:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Tab styling - more game-like */
+    button[data-baseweb="tab"] {
+        border-radius: 8px 8px 0 0 !important;
+        padding: 0.5rem 1.2rem !important;
+        font-weight: 500 !important;
+    }
+    button[data-baseweb="tab"][aria-selected="true"] {
+        background: linear-gradient(180deg, #1e3a5f, #1e293b) !important;
+        border-bottom: 2px solid #3B82F6 !important;
+    }
+
+    /* Sidebar polish */
+    section[data-testid="stSidebar"] {
+        border-right: 1px solid #1e293b !important;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
     section[data-testid="stSidebar"], section[data-testid="stSidebar"] > div {
         background-color: #1e293b !important;
     }

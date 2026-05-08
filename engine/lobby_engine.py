@@ -172,6 +172,7 @@ def execute_action(state, action_id, target=None, target_id=None):
     })
 
     add_news(state, action.get("icon", "📋"), log_msg, "political")
+    state["_toast_msg"] = f"{action.get('icon','✓')} {log_msg}"
     return True, log_msg
 
 

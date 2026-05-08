@@ -7,6 +7,7 @@ from engine.game_state import get_days_to_election, get_coalition_seat_total
 from engine.bill_engine import calculate_bill_support, days_to_vote, get_current_stage
 from engine.lobby_engine import LOBBY_ACTIONS, execute_action
 from engine.turn_engine import advance_day_turn, advance_multiple_days
+from .audio import play_sfx, music_toggle_button
 
 
 def _html(s):
@@ -47,17 +48,29 @@ def render_hud(state):
     tension_color = "#EF4444" if n["social_tension"] > 65 else "#FBBF24" if n["social_tension"] > 50 else "#22C55E"
     gdp_color = "#22C55E" if n["gdp_growth"] > 0 else "#EF4444"
 
+    ap_orbs = "".join([
+        f'<span title="Action Point {i+1}" style="display:inline-block;width:13px;height:13px;border-radius:50%;margin:0 1px;background:{"radial-gradient(circle at 30% 30%, #FDE68A, #FBBF24)" if i < ap else "#1e293b"};border:1px solid {ap_color if i < ap else "#334155"};box-shadow:{("0 0 8px " + ap_color) if i < ap else "none"};vertical-align:middle"></span>'
+        for i in range(max_ap)
+    ])
+
+    election_urgency = ""
+    if days_left <= 30:
+        election_urgency = ' <span style="color:#EF4444;font-weight:bold">⚠️ ELECTION SOON</span>'
+    elif days_left <= 90:
+        election_urgency = ' <span style="color:#FBBF24;font-weight:bold">⏰ Approaching</span>'
+
     hud = (
-        '<div style="background:linear-gradient(180deg,#1e3a5f,#0f172a);border:1px solid #3B82F6;border-radius:10px;padding:10px 14px;margin-bottom:10px">'
-        '<div style="display:grid;grid-template-columns: 1.2fr 0.7fr 0.7fr 0.7fr 0.7fr 0.7fr 0.9fr;gap:10px;align-items:center">'
+        '<div style="background:linear-gradient(180deg,#1e3a5f,#0f172a);border:1px solid #3B82F6;border-radius:10px;padding:10px 14px;margin-bottom:10px;box-shadow:0 4px 24px rgba(59,130,246,0.15)">'
+        '<div style="display:grid;grid-template-columns: 1.4fr 0.9fr 0.7fr 0.7fr 0.7fr 0.7fr 0.9fr;gap:10px;align-items:center">'
         '<div style="border-right:1px solid #334155;padding-right:10px">'
-        '<div style="color:#93c5fd;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.5px">📅 Date</div>'
+        '<div style="color:#93c5fd;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.5px">📅 In Office</div>'
         f'<div style="color:#f1f5f9;font-weight:bold;font-size:1rem;line-height:1.1">{format_date(cal["date"])}</div>'
-        f'<div style="color:#cbd5e1;font-size:0.72rem">Day {state["turn"]} · {days_left}d to election</div>'
+        f'<div style="color:#cbd5e1;font-size:0.72rem">Day {state["turn"]} · {days_left}d to election{election_urgency}</div>'
         '</div>'
-        f'<div style="text-align:center;background:#0f172a;border:1px solid {ap_color}40;border-radius:6px;padding:4px 6px">'
-        f'<div style="color:{ap_color};font-size:0.68rem;text-transform:uppercase;font-weight:bold">⚡ Action Points</div>'
-        f'<div style="color:{ap_color};font-size:1.4rem;font-weight:bold;line-height:1.1">{ap}<span style="font-size:0.9rem;color:#64748b">/{max_ap}</span></div>'
+        f'<div title="Action Points refill each morning to {max_ap}. Spend on lobbying, meetings, press." style="text-align:center;background:#0f172a;border:1px solid {ap_color}40;border-radius:6px;padding:4px 6px">'
+        f'<div style="color:{ap_color};font-size:0.68rem;text-transform:uppercase;font-weight:bold">⚡ Energy</div>'
+        f'<div style="line-height:1;margin:3px 0 1px">{ap_orbs}</div>'
+        f'<div style="color:#cbd5e1;font-size:0.7rem">{ap}/{max_ap} AP</div>'
         '</div>'
         f'<div style="text-align:center;background:#0f172a;border:1px solid {pc_color}40;border-radius:6px;padding:4px 6px">'
         f'<div style="color:{pc_color};font-size:0.68rem;text-transform:uppercase;font-weight:bold">💼 Pol. Capital</div>'
@@ -133,6 +146,10 @@ def _render_quick_action_bar(state):
                 st.warning("Resolve crisis first!")
             else:
                 updated = advance_day_turn(state)
+                play_sfx("day_advance")
+                if updated.get("active_events"):
+                    play_sfx("crisis")
+                updated["_show_day_overlay"] = True
                 st.session_state["game"] = updated
                 st.rerun()
     with cols[6]:
@@ -141,6 +158,8 @@ def _render_quick_action_bar(state):
                 st.warning("Resolve crisis first!")
             else:
                 updated = advance_multiple_days(state, 7)
+                play_sfx("day_advance")
+                updated["_show_day_overlay"] = True
                 st.session_state["game"] = updated
                 st.rerun()
 
