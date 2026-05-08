@@ -7,6 +7,8 @@ from engine.calendar_engine import get_upcoming_calendar
 def render(state):
     inject_css()
 
+    _render_tip_card(state)
+
     col_a, col_b = st.columns([2, 1])
     with col_a:
         _render_indicators(state)
@@ -14,6 +16,40 @@ def render(state):
     with col_b:
         _render_upcoming_strip(state)
         _render_news_compact(state)
+
+
+def _render_tip_card(state):
+    """Show the active tip if there is one."""
+    tip = st.session_state.get("_active_tip")
+    if not tip:
+        return
+
+    safe_html(f"""
+    <div style="background:linear-gradient(90deg, rgba(251,191,36,0.12), rgba(59,130,246,0.08));
+                border:1px solid rgba(251,191,36,0.4);
+                border-radius:10px;
+                padding:0.7rem 1rem;
+                margin-bottom:1rem;
+                display:flex;
+                align-items:center;
+                gap:14px;
+                animation: fadeIn 0.5s ease-out">
+      <div style="font-size:1.6rem">{tip['icon']}</div>
+      <div style="flex:1">
+        <div style="color:#FBBF24;font-weight:bold;font-size:0.85rem;letter-spacing:0.05em;text-transform:uppercase">
+          💡 Tip · {tip['title']}
+        </div>
+        <div style="color:#cbd5e1;font-size:0.9rem;line-height:1.4;margin-top:2px">
+          {tip['text']}
+        </div>
+      </div>
+    </div>
+    """)
+    col_dismiss = st.columns([5, 1])[1]
+    with col_dismiss:
+        if st.button("✕ Dismiss", key="dismiss_tip", use_container_width=True):
+            st.session_state.pop("_active_tip", None)
+            st.rerun()
 
 
 def _render_indicators(state):

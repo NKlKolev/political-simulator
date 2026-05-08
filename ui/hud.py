@@ -149,6 +149,7 @@ def _render_quick_action_bar(state):
                 play_sfx("day_advance")
                 if updated.get("active_events"):
                     play_sfx("crisis")
+                updated["_show_day_overlay"] = True
                 st.session_state["game"] = updated
                 st.rerun()
     with cols[6]:
@@ -158,6 +159,7 @@ def _render_quick_action_bar(state):
             else:
                 updated = advance_multiple_days(state, 7)
                 play_sfx("day_advance")
+                updated["_show_day_overlay"] = True
                 st.session_state["game"] = updated
                 st.rerun()
 

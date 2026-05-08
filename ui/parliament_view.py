@@ -27,10 +27,11 @@ def render(state):
     inject_css()
     st.markdown("## 🏛️ Parliament")
 
-    tab1, tab2, tab3, tab4 = st.tabs([
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
         "🏛️ Chamber",
         "📜 Active Bills",
         "📋 Propose Bill",
+        "🎭 Procedural Moves",
         "✅ Laws & History"
     ])
     with tab1:
@@ -40,7 +41,56 @@ def render(state):
     with tab3:
         _render_propose_bill(state)
     with tab4:
+        _render_procedural(state)
+    with tab5:
         _render_law_history(state)
+
+
+def _render_procedural(state):
+    """Special parliamentary procedural moves."""
+    from engine.parliament_actions import PROCEDURAL_ACTIONS, execute_procedural
+
+    cal = state["calendar"]
+    pc = state["national"]["political_capital"]
+    ap = cal["action_points"]
+
+    st.markdown("### 🎭 Procedural Moves")
+    st.caption("Special parliamentary actions outside normal bill flow. Use them strategically — they can save a coalition or sink an opponent.")
+
+    by_category = {}
+    for aid, action in PROCEDURAL_ACTIONS.items():
+        cat = action.get("category", "other")
+        by_category.setdefault(cat, []).append((aid, action))
+
+    cat_labels = {
+        "coalition": "🤝 Coalition Management",
+        "agenda": "📋 Agenda Control",
+        "obstruction": "🛑 Block the Opposition",
+        "cabinet": "👔 Cabinet Powers",
+        "media": "📺 Media & Authority",
+        "reform": "⚖️ Reform Actions",
+    }
+
+    for cat, items in by_category.items():
+        st.markdown(f"#### {cat_labels.get(cat, cat.title())}")
+        cols = st.columns(2)
+        for i, (aid, action) in enumerate(items):
+            col = cols[i % 2]
+            with col:
+                can = ap >= action["ap_cost"] and pc >= action["pc_cost"]
+                color = "#3B82F6" if can else "#475569"
+                safe_html(f"""
+                <div style="background:#1e293b;border:1px solid {color};border-radius:8px;padding:0.75rem;margin-bottom:0.5rem;min-height:115px">
+                  <div style="font-weight:bold;color:#f1f5f9;font-size:0.95rem">{action['icon']} {action['name']}</div>
+                  <div style="font-size:0.82rem;color:#cbd5e1;margin-top:4px;line-height:1.4">{action['description']}</div>
+                  <div style="font-size:0.75rem;color:#94a3b8;margin-top:6px">⚡ {action['ap_cost']} AP · 💼 {action['pc_cost']} PC</div>
+                </div>
+                """)
+                if st.button("Execute", key=f"proc_{aid}", disabled=not can, use_container_width=True):
+                    ok, msg = execute_procedural(state, aid)
+                    if ok:
+                        st.session_state["game"] = state
+                        st.rerun()
 
 
 def _render_chamber(state):

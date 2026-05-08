@@ -27,35 +27,12 @@ SFX = {
 
 
 def render_music_player():
-    """Render the persistent background music player. Call once per page render."""
-    if "music_enabled" not in st.session_state:
-        st.session_state["music_enabled"] = False
-    if "music_volume" not in st.session_state:
-        st.session_state["music_volume"] = 30
+    """Music disabled per user request — kept as no-op so callers don't break."""
+    return
 
-    track_url = MUSIC_TRACKS["ambient_political"]
-    enabled = st.session_state.get("music_enabled", False)
-    volume = st.session_state.get("music_volume", 30) / 100.0
 
-    autoplay = "autoplay" if enabled else ""
-    muted = "" if enabled else "muted"
-
-    components.html(f"""
-    <audio id="bgmusic" loop {autoplay} {muted} preload="auto" style="display:none">
-      <source src="{track_url}" type="audio/mpeg">
-    </audio>
-    <script>
-      (function() {{
-        const audio = document.getElementById('bgmusic');
-        if (!audio) return;
-        audio.volume = {volume};
-        // Try to play (may need user interaction)
-        if ({str(enabled).lower()}) {{
-          audio.play().catch(() => {{}});
-        }}
-      }})();
-    </script>
-    """, height=0)
+def music_toggle_button():
+    return False
 
 
 def play_sfx(sfx_name):
@@ -78,15 +55,66 @@ def render_pending_sfx():
             """, height=0)
 
 
-def music_toggle_button():
-    """Render a tiny music on/off toggle. Returns True if state changed."""
-    enabled = st.session_state.get("music_enabled", False)
-    icon = "🔊" if enabled else "🔇"
-    label = f"{icon} Music"
-    if st.button(label, key="music_toggle_btn", help="Toggle background music"):
-        st.session_state["music_enabled"] = not enabled
-        return True
-    return False
+def day_advance_overlay(date_str, day_num, weekday):
+    """Brief animated overlay showing the new day after advancing."""
+    components.html(f"""
+    <style>
+      @keyframes overlayFadeIn {{
+        0% {{ opacity: 0; transform: scale(0.85); }}
+        15% {{ opacity: 1; transform: scale(1); }}
+        70% {{ opacity: 1; transform: scale(1); }}
+        100% {{ opacity: 0; transform: scale(1.05); }}
+      }}
+      .day-overlay {{
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        pointer-events: none;
+        animation: overlayFadeIn 1.6s ease-out forwards;
+      }}
+      .day-card {{
+        background: linear-gradient(135deg, rgba(30, 58, 95, 0.95), rgba(15, 23, 42, 0.95));
+        border: 2px solid #3B82F6;
+        border-radius: 16px;
+        padding: 1.6rem 3rem;
+        text-align: center;
+        box-shadow: 0 0 60px rgba(59, 130, 246, 0.6), 0 20px 60px rgba(0,0,0,0.6);
+        backdrop-filter: blur(8px);
+      }}
+      .day-overlay-weekday {{
+        font-family: 'Cinzel', serif;
+        color: #93c5fd;
+        font-size: 1.1rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        margin-bottom: 0.3rem;
+      }}
+      .day-overlay-date {{
+        font-family: 'Cinzel', serif;
+        color: #f1f5f9;
+        font-size: 2rem;
+        font-weight: 700;
+        text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+      }}
+      .day-overlay-day {{
+        color: #FBBF24;
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }}
+    </style>
+    <div class="day-overlay">
+      <div class="day-card">
+        <div class="day-overlay-weekday">{weekday}</div>
+        <div class="day-overlay-date">{date_str}</div>
+        <div class="day-overlay-day">Day {day_num} in office</div>
+      </div>
+    </div>
+    """, height=0)
 
 
 def fire_confetti():

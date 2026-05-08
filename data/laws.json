@@ -10,11 +10,29 @@
     "parliament_difficulty": 70,
     "implementation_turns": 4,
     "effects_on_pass": {
-      "national": {"corruption": -12, "rule_of_law": 10, "democratic_quality": 8, "public_trust": 6, "eu_relations": 10, "political_capital": -5},
-      "voter_effects": {"urban_liberals": 12, "pro_european_middle_class": 10, "rural_conservatives": -3}
+      "national": {
+        "corruption": -12,
+        "rule_of_law": 10,
+        "democratic_quality": 8,
+        "public_trust": 6,
+        "eu_relations": 10,
+        "political_capital": -5
+      },
+      "voter_effects": {
+        "urban_liberals": 12,
+        "pro_european_middle_class": 10,
+        "rural_conservatives": -3
+      }
     },
-    "coalition_support": {"green_future": 85, "social_democrats": 70, "liberal_democrats": 65},
-    "opposition_support": {"citizens_union": 20, "national_front": 15},
+    "coalition_support": {
+      "green_future": 85,
+      "social_democrats": 70,
+      "liberal_democrats": 65
+    },
+    "opposition_support": {
+      "citizens_union": 20,
+      "national_front": 15
+    },
     "news_pass": "Parliament passes Independent Anti-Corruption Agency law. Historic reform hailed by EU. CU and NF vote against.",
     "news_fail": "Anti-corruption agency law defeated in parliament. Coalition fails to hold ranks. Scandal follows.",
     "ai_description": "Bold anti-corruption reform — central to DA platform."
@@ -30,11 +48,29 @@
     "parliament_difficulty": 45,
     "implementation_turns": 3,
     "effects_on_pass": {
-      "national": {"inflation": 0.8, "social_tension": -12, "public_trust": 6, "budget_deficit": 0.25, "gdp_growth": 0.3},
-      "voter_effects": {"industrial_workers": 14, "public_sector_employees": 10, "small_business_owners": -8, "pensioners": 3}
+      "national": {
+        "inflation": 0.8,
+        "social_tension": -12,
+        "public_trust": 6,
+        "budget_deficit": 0.25,
+        "gdp_growth": 0.3
+      },
+      "voter_effects": {
+        "industrial_workers": 14,
+        "public_sector_employees": 10,
+        "small_business_owners": -8,
+        "pensioners": 3
+      }
     },
-    "coalition_support": {"social_democrats": 95, "green_future": 80, "liberal_democrats": 40},
-    "opposition_support": {"citizens_union": 25, "national_front": 60},
+    "coalition_support": {
+      "social_democrats": 95,
+      "green_future": 80,
+      "liberal_democrats": 40
+    },
+    "opposition_support": {
+      "citizens_union": 25,
+      "national_front": 60
+    },
     "news_pass": "Minimum wage rise passes with broad support. Workers celebrate. Business groups warn of job losses.",
     "news_fail": "Wage increase fails. Liberal Democrats withdraw support citing inflation concerns.",
     "ai_description": "Popular but inflationary. SD demand."
@@ -50,10 +86,24 @@
     "parliament_difficulty": 65,
     "implementation_turns": 6,
     "effects_on_pass": {
-      "national": {"rule_of_law": 15, "democratic_quality": 10, "corruption": -8, "eu_relations": 12, "public_trust": 5, "political_capital": -8}
+      "national": {
+        "rule_of_law": 15,
+        "democratic_quality": 10,
+        "corruption": -8,
+        "eu_relations": 12,
+        "public_trust": 5,
+        "political_capital": -8
+      }
     },
-    "coalition_support": {"green_future": 90, "social_democrats": 75, "liberal_democrats": 80},
-    "opposition_support": {"citizens_union": 15, "national_front": 5},
+    "coalition_support": {
+      "green_future": 90,
+      "social_democrats": 75,
+      "liberal_democrats": 80
+    },
+    "opposition_support": {
+      "citizens_union": 15,
+      "national_front": 5
+    },
     "news_pass": "Judicial reform passes after weeks of debate. CU walked out. EU Commissioner calls it 'landmark.'",
     "news_fail": "Judicial reform bill fails. Coalition split. Several DA MPs voted against citing rushed process.",
     "ai_description": "Critical for EU relations. Hard to pass. Long implementation."
@@ -69,11 +119,29 @@
     "parliament_difficulty": 55,
     "implementation_turns": 8,
     "effects_on_pass": {
-      "national": {"energy_security": 15, "inflation": -0.5, "eu_relations": 10, "public_trust": 4, "budget_deficit": 0.3},
-      "voter_effects": {"young_voters": 12, "urban_liberals": 8, "industrial_workers": -8, "rural_conservatives": -5}
+      "national": {
+        "energy_security": 15,
+        "inflation": -0.5,
+        "eu_relations": 10,
+        "public_trust": 4,
+        "budget_deficit": 0.3
+      },
+      "voter_effects": {
+        "young_voters": 12,
+        "urban_liberals": 8,
+        "industrial_workers": -8,
+        "rural_conservatives": -5
+      }
     },
-    "coalition_support": {"green_future": 98, "social_democrats": 55, "liberal_democrats": 60},
-    "opposition_support": {"citizens_union": 20, "national_front": 5},
+    "coalition_support": {
+      "green_future": 98,
+      "social_democrats": 55,
+      "liberal_democrats": 60
+    },
+    "opposition_support": {
+      "citizens_union": 20,
+      "national_front": 5
+    },
     "news_pass": "Green energy law passes. GF celebrates. Northern industrial regions furious over coal phaseout.",
     "news_fail": "Renewable energy bill fails after SD rebel over coal region job losses.",
     "ai_description": "GF cornerstone demand. Good for EU, bad for industrial regions."
@@ -89,10 +157,23 @@
     "parliament_difficulty": 58,
     "implementation_turns": 2,
     "effects_on_pass": {
-      "national": {"media_freedom": 15, "democratic_quality": 8, "corruption": -5, "public_trust": 5, "eu_relations": 8}
+      "national": {
+        "media_freedom": 15,
+        "democratic_quality": 8,
+        "corruption": -5,
+        "public_trust": 5,
+        "eu_relations": 8
+      }
     },
-    "coalition_support": {"green_future": 95, "social_democrats": 75, "liberal_democrats": 70},
-    "opposition_support": {"citizens_union": 10, "national_front": 20},
+    "coalition_support": {
+      "green_future": 95,
+      "social_democrats": 75,
+      "liberal_democrats": 70
+    },
+    "opposition_support": {
+      "citizens_union": 10,
+      "national_front": 20
+    },
     "news_pass": "Media transparency law passed. Several oligarch-owned TV channels challenge in court.",
     "news_fail": "Media transparency bill blocked after intense lobbying from media owners.",
     "ai_description": "Fights oligarchic media control. Angry opposition from media barons."
@@ -108,11 +189,34 @@
     "parliament_difficulty": 40,
     "implementation_turns": 12,
     "effects_on_pass": {
-      "national": {"gdp_growth": 0.6, "unemployment": -1.2, "public_trust": 8, "budget_deficit": 0.5, "eu_relations": 5},
-      "regions": {"northern_industry": {"infrastructure": 10}, "mountain_region": {"infrastructure": 12}, "southern_fields": {"infrastructure": 8}}
+      "national": {
+        "gdp_growth": 0.6,
+        "unemployment": -1.2,
+        "public_trust": 8,
+        "budget_deficit": 0.5,
+        "eu_relations": 5
+      },
+      "regions": {
+        "northern_industry": {
+          "infrastructure": 10
+        },
+        "mountain_region": {
+          "infrastructure": 12
+        },
+        "southern_fields": {
+          "infrastructure": 8
+        }
+      }
     },
-    "coalition_support": {"social_democrats": 85, "green_future": 65, "liberal_democrats": 80},
-    "opposition_support": {"citizens_union": 55, "national_front": 45},
+    "coalition_support": {
+      "social_democrats": 85,
+      "green_future": 65,
+      "liberal_democrats": 80
+    },
+    "opposition_support": {
+      "citizens_union": 55,
+      "national_front": 45
+    },
     "news_pass": "Parliament approves largest infrastructure plan in decade. Broad cross-party support. Procurement watchdog activated.",
     "news_fail": "Infrastructure bill fails. Coalition argues about regional distribution of funds.",
     "ai_description": "Popular, bipartisan. Corruption risk during implementation."
@@ -128,11 +232,28 @@
     "parliament_difficulty": 75,
     "implementation_turns": 3,
     "effects_on_pass": {
-      "national": {"corruption": -15, "rule_of_law": 8, "democratic_quality": 6, "eu_relations": 8, "elite_conflict": 20, "public_trust": 8},
-      "voter_effects": {"urban_liberals": 14, "pro_european_middle_class": 10}
+      "national": {
+        "corruption": -15,
+        "rule_of_law": 8,
+        "democratic_quality": 6,
+        "eu_relations": 8,
+        "elite_conflict": 20,
+        "public_trust": 8
+      },
+      "voter_effects": {
+        "urban_liberals": 14,
+        "pro_european_middle_class": 10
+      }
     },
-    "coalition_support": {"green_future": 90, "social_democrats": 80, "liberal_democrats": 55},
-    "opposition_support": {"citizens_union": 5, "national_front": 30},
+    "coalition_support": {
+      "green_future": 90,
+      "social_democrats": 80,
+      "liberal_democrats": 55
+    },
+    "opposition_support": {
+      "citizens_union": 5,
+      "national_front": 30
+    },
     "news_pass": "Anti-oligarch law passes narrowly. Business lobby threatens legal challenge. EU applauds.",
     "news_fail": "Anti-oligarch bill fails. Several coalition MPs mysteriously absent during vote.",
     "ai_description": "Bold reform. Will face resistance from powerful interests inside and outside parliament."
@@ -148,11 +269,28 @@
     "parliament_difficulty": 48,
     "implementation_turns": 8,
     "effects_on_pass": {
-      "national": {"public_trust": 10, "social_tension": -8, "budget_deficit": 0.4, "corruption": -3},
-      "voter_effects": {"pensioners": 15, "public_sector_employees": 8, "rural_conservatives": 6, "young_voters": 4}
+      "national": {
+        "public_trust": 10,
+        "social_tension": -8,
+        "budget_deficit": 0.4,
+        "corruption": -3
+      },
+      "voter_effects": {
+        "pensioners": 15,
+        "public_sector_employees": 8,
+        "rural_conservatives": 6,
+        "young_voters": 4
+      }
     },
-    "coalition_support": {"social_democrats": 90, "green_future": 75, "liberal_democrats": 65},
-    "opposition_support": {"citizens_union": 40, "national_front": 35},
+    "coalition_support": {
+      "social_democrats": 90,
+      "green_future": 75,
+      "liberal_democrats": 65
+    },
+    "opposition_support": {
+      "citizens_union": 40,
+      "national_front": 35
+    },
     "news_pass": "Healthcare reform signed into law. Implementation will take years. Doctors cautiously optimistic.",
     "news_fail": "Health reform fails. Budget concerns led coalition partners to abstain.",
     "ai_description": "Popular with pensioners and rural voters. Expensive. Long implementation."
@@ -168,10 +306,22 @@
     "parliament_difficulty": 60,
     "implementation_turns": 3,
     "effects_on_pass": {
-      "national": {"democratic_quality": 12, "corruption": -5, "public_trust": 6, "eu_relations": 8}
+      "national": {
+        "democratic_quality": 12,
+        "corruption": -5,
+        "public_trust": 6,
+        "eu_relations": 8
+      }
     },
-    "coalition_support": {"green_future": 88, "social_democrats": 72, "liberal_democrats": 75},
-    "opposition_support": {"citizens_union": 15, "national_front": 10},
+    "coalition_support": {
+      "green_future": 88,
+      "social_democrats": 72,
+      "liberal_democrats": 75
+    },
+    "opposition_support": {
+      "citizens_union": 15,
+      "national_front": 10
+    },
     "news_pass": "Electoral reform passes. International observers praise changes. CU and NF vote against.",
     "news_fail": "Electoral reform blocked. Opposition claims reform designed to benefit ruling party.",
     "ai_description": "Strengthens democracy. Opposition will fight it hard."
@@ -187,11 +337,28 @@
     "parliament_difficulty": 38,
     "implementation_turns": 2,
     "effects_on_pass": {
-      "national": {"public_trust": 8, "social_tension": -10, "budget_deficit": 0.35, "inflation": 0.4},
-      "voter_effects": {"pensioners": 20, "rural_conservatives": 8, "public_sector_employees": 3, "young_voters": -3}
+      "national": {
+        "public_trust": 8,
+        "social_tension": -10,
+        "budget_deficit": 0.35,
+        "inflation": 0.4
+      },
+      "voter_effects": {
+        "pensioners": 20,
+        "rural_conservatives": 8,
+        "public_sector_employees": 3,
+        "young_voters": -3
+      }
     },
-    "coalition_support": {"social_democrats": 95, "green_future": 60, "liberal_democrats": 50},
-    "opposition_support": {"citizens_union": 65, "national_front": 70},
+    "coalition_support": {
+      "social_democrats": 95,
+      "green_future": 60,
+      "liberal_democrats": 50
+    },
+    "opposition_support": {
+      "citizens_union": 65,
+      "national_front": 70
+    },
     "news_pass": "Pension increase signed into law amid broad support. Finance Minister worried about deficit impact.",
     "news_fail": "Pension increase narrowly defeated. Liberal Democrats pulled support over budget concerns.",
     "ai_description": "Hugely popular especially with pensioners. Costly. Broad support possible."
@@ -207,11 +374,30 @@
     "parliament_difficulty": 62,
     "implementation_turns": 3,
     "effects_on_pass": {
-      "national": {"budget_deficit": -0.3, "public_trust": 8, "social_tension": -8, "foreign_investment": -8, "elite_conflict": 15},
-      "voter_effects": {"industrial_workers": 10, "young_voters": 8, "urban_liberals": 6, "small_business_owners": -5, "pensioners": 5}
+      "national": {
+        "budget_deficit": -0.3,
+        "public_trust": 8,
+        "social_tension": -8,
+        "foreign_investment": -8,
+        "elite_conflict": 15
+      },
+      "voter_effects": {
+        "industrial_workers": 10,
+        "young_voters": 8,
+        "urban_liberals": 6,
+        "small_business_owners": -5,
+        "pensioners": 5
+      }
     },
-    "coalition_support": {"social_democrats": 92, "green_future": 80, "liberal_democrats": 25},
-    "opposition_support": {"citizens_union": 10, "national_front": 45},
+    "coalition_support": {
+      "social_democrats": 92,
+      "green_future": 80,
+      "liberal_democrats": 25
+    },
+    "opposition_support": {
+      "citizens_union": 10,
+      "national_front": 45
+    },
     "news_pass": "Wealth tax passes despite fierce lobbying. Capital flight warnings from business groups. Polls surge.",
     "news_fail": "Wealth tax blocked. Liberal Democrats vote against alongside opposition. Government humiliated.",
     "ai_description": "Populist but effective budget measure. LD will resist strongly."
@@ -227,15 +413,34 @@
     "parliament_difficulty": 52,
     "implementation_turns": 6,
     "effects_on_pass": {
-      "national": {"democratic_quality": 6, "political_capital": -3},
+      "national": {
+        "democratic_quality": 6,
+        "political_capital": -3
+      },
       "regions": {
-        "northern_industry": {"local_elite_power": 10, "unrest": -5},
-        "southern_fields": {"local_elite_power": 8, "unrest": -3},
-        "minority_valley": {"local_elite_power": 12, "unrest": -8}
+        "northern_industry": {
+          "local_elite_power": 10,
+          "unrest": -5
+        },
+        "southern_fields": {
+          "local_elite_power": 8,
+          "unrest": -3
+        },
+        "minority_valley": {
+          "local_elite_power": 12,
+          "unrest": -8
+        }
       }
     },
-    "coalition_support": {"green_future": 75, "social_democrats": 65, "liberal_democrats": 70},
-    "opposition_support": {"citizens_union": 40, "national_front": 30},
+    "coalition_support": {
+      "green_future": 75,
+      "social_democrats": 65,
+      "liberal_democrats": 70
+    },
+    "opposition_support": {
+      "citizens_union": 40,
+      "national_front": 30
+    },
     "news_pass": "Decentralization law passes. Regions gain new powers. Central government critics say it is 'fragmentation.'",
     "news_fail": "Decentralization bill fails. DA MPs worry about losing central control.",
     "ai_description": "Gives regions power. Reduces central government influence. Complex effects."
@@ -251,10 +456,23 @@
     "parliament_difficulty": 55,
     "implementation_turns": 3,
     "effects_on_pass": {
-      "national": {"corruption": -8, "rule_of_law": 6, "eu_relations": 8, "elite_conflict": 12, "foreign_investment": 5}
+      "national": {
+        "corruption": -8,
+        "rule_of_law": 6,
+        "eu_relations": 8,
+        "elite_conflict": 12,
+        "foreign_investment": 5
+      }
     },
-    "coalition_support": {"green_future": 88, "social_democrats": 75, "liberal_democrats": 70},
-    "opposition_support": {"citizens_union": 20, "national_front": 15},
+    "coalition_support": {
+      "green_future": 88,
+      "social_democrats": 75,
+      "liberal_democrats": 70
+    },
+    "opposition_support": {
+      "citizens_union": 20,
+      "national_front": 15
+    },
     "news_pass": "AML law strengthened. Several oligarchs challenge in court. EU compliance score improves.",
     "news_fail": "AML bill fails after intense behind-the-scenes lobbying. Corruption watchdog expresses alarm.",
     "ai_description": "Targets money laundering networks. Strong EU support. Oligarchs will resist."
@@ -270,11 +488,26 @@
     "parliament_difficulty": 45,
     "implementation_turns": 10,
     "effects_on_pass": {
-      "national": {"energy_security": 20, "eu_relations": 8, "inflation": -1.0, "budget_deficit": 0.4},
-      "voter_effects": {"rural_conservatives": 5, "industrial_workers": 5}
+      "national": {
+        "energy_security": 20,
+        "eu_relations": 8,
+        "inflation": -1.0,
+        "budget_deficit": 0.4
+      },
+      "voter_effects": {
+        "rural_conservatives": 5,
+        "industrial_workers": 5
+      }
     },
-    "coalition_support": {"green_future": 65, "social_democrats": 80, "liberal_democrats": 80},
-    "opposition_support": {"citizens_union": 55, "national_front": 40},
+    "coalition_support": {
+      "green_future": 65,
+      "social_democrats": 80,
+      "liberal_democrats": 80
+    },
+    "opposition_support": {
+      "citizens_union": 55,
+      "national_front": 40
+    },
     "news_pass": "Energy security package passes with unusual cross-party support. Long implementation ahead.",
     "news_fail": "Energy security bill fails. GF objects to LNG terminal environmental impact.",
     "ai_description": "Reduces energy dependence. Broad support but takes years to implement."
@@ -290,12 +523,35 @@
     "parliament_difficulty": 65,
     "implementation_turns": 4,
     "effects_on_pass": {
-      "national": {"democratic_quality": 8, "eu_relations": 8, "social_tension": -5, "public_trust": 4},
-      "regions": {"minority_valley": {"unrest": -15, "ethnic_tension": -15, "party_support_da": 12}},
-      "voter_effects": {"ethnic_minorities": 20, "urban_liberals": 8, "nationalists": -12, "rural_conservatives": -5}
+      "national": {
+        "democratic_quality": 8,
+        "eu_relations": 8,
+        "social_tension": -5,
+        "public_trust": 4
+      },
+      "regions": {
+        "minority_valley": {
+          "unrest": -15,
+          "ethnic_tension": -15,
+          "party_support_da": 12
+        }
+      },
+      "voter_effects": {
+        "ethnic_minorities": 20,
+        "urban_liberals": 8,
+        "nationalists": -12,
+        "rural_conservatives": -5
+      }
     },
-    "coalition_support": {"green_future": 90, "social_democrats": 85, "liberal_democrats": 70},
-    "opposition_support": {"citizens_union": 8, "national_front": 2},
+    "coalition_support": {
+      "green_future": 90,
+      "social_democrats": 85,
+      "liberal_democrats": 70
+    },
+    "opposition_support": {
+      "citizens_union": 8,
+      "national_front": 2
+    },
     "news_pass": "Minority rights law enacted. NF stages protest walkout. EU praises Pustinyakovo.",
     "news_fail": "Minority rights bill fails. Several coalition MPs voted against citing constituent pressure.",
     "ai_description": "Politically costly domestically, very positive for EU relations and minority communities."
@@ -311,11 +567,28 @@
     "parliament_difficulty": 70,
     "implementation_turns": 4,
     "effects_on_pass": {
-      "national": {"budget_deficit": 0.3, "gdp_growth": 0.5, "social_tension": 12, "foreign_investment": 12},
-      "voter_effects": {"small_business_owners": 14, "pro_european_middle_class": 8, "industrial_workers": -10, "pensioners": -5}
+      "national": {
+        "budget_deficit": 0.3,
+        "gdp_growth": 0.5,
+        "social_tension": 12,
+        "foreign_investment": 12
+      },
+      "voter_effects": {
+        "small_business_owners": 14,
+        "pro_european_middle_class": 8,
+        "industrial_workers": -10,
+        "pensioners": -5
+      }
     },
-    "coalition_support": {"green_future": 20, "social_democrats": 8, "liberal_democrats": 90},
-    "opposition_support": {"citizens_union": 80, "national_front": 25},
+    "coalition_support": {
+      "green_future": 20,
+      "social_democrats": 8,
+      "liberal_democrats": 90
+    },
+    "opposition_support": {
+      "citizens_union": 80,
+      "national_front": 25
+    },
     "news_pass": "Flat tax passes with LD and CU support. SD and GF threaten to leave coalition. PM faces backlash.",
     "news_fail": "Flat tax bill fails. SD votes solidly against. Coalition nearly collapses.",
     "ai_description": "LD demand. Will anger SD and GF. Could split coalition."
@@ -331,11 +604,27 @@
     "parliament_difficulty": 55,
     "implementation_turns": 5,
     "effects_on_pass": {
-      "national": {"democratic_quality": 8, "social_tension": -8, "public_trust": 6, "security_risk": 3},
-      "voter_effects": {"young_voters": 10, "urban_liberals": 10, "ethnic_minorities": 12}
+      "national": {
+        "democratic_quality": 8,
+        "social_tension": -8,
+        "public_trust": 6,
+        "security_risk": 3
+      },
+      "voter_effects": {
+        "young_voters": 10,
+        "urban_liberals": 10,
+        "ethnic_minorities": 12
+      }
     },
-    "coalition_support": {"green_future": 92, "social_democrats": 78, "liberal_democrats": 65},
-    "opposition_support": {"citizens_union": 15, "national_front": 10},
+    "coalition_support": {
+      "green_future": 92,
+      "social_democrats": 78,
+      "liberal_democrats": 65
+    },
+    "opposition_support": {
+      "citizens_union": 15,
+      "national_front": 10
+    },
     "news_pass": "Police reform passes. Police union stages demonstration. Protest groups cautiously optimistic.",
     "news_fail": "Police reform bill fails. Interior Ministry opposition proved decisive.",
     "ai_description": "Reduces police abuse. Unpopular with Interior Ministry and security establishment."
@@ -351,11 +640,29 @@
     "parliament_difficulty": 42,
     "implementation_turns": 2,
     "effects_on_pass": {
-      "national": {"inflation": -2.0, "social_tension": -12, "public_trust": 8, "budget_deficit": 0.2, "eu_relations": -3},
-      "voter_effects": {"pensioners": 12, "industrial_workers": 10, "small_business_owners": -6, "young_voters": 6}
+      "national": {
+        "inflation": -2.0,
+        "social_tension": -12,
+        "public_trust": 8,
+        "budget_deficit": 0.2,
+        "eu_relations": -3
+      },
+      "voter_effects": {
+        "pensioners": 12,
+        "industrial_workers": 10,
+        "small_business_owners": -6,
+        "young_voters": 6
+      }
     },
-    "coalition_support": {"social_democrats": 90, "green_future": 75, "liberal_democrats": 55},
-    "opposition_support": {"citizens_union": 30, "national_front": 65},
+    "coalition_support": {
+      "social_democrats": 90,
+      "green_future": 75,
+      "liberal_democrats": 55
+    },
+    "opposition_support": {
+      "citizens_union": 30,
+      "national_front": 65
+    },
     "news_pass": "Anti-inflation package passes. NF claims credit, DA contests. Economists divided. Prices fall slightly.",
     "news_fail": "Emergency inflation measures blocked. LD votes against price controls as 'anti-market.'",
     "ai_description": "Popular and fast-acting. EU dislikes price controls. LD will be reluctant."
@@ -371,11 +678,29 @@
     "parliament_difficulty": 52,
     "implementation_turns": 6,
     "effects_on_pass": {
-      "national": {"security_risk": -10, "military_readiness": 20, "eu_relations": 5, "budget_deficit": 0.4, "social_tension": 5},
-      "voter_effects": {"nationalists": 10, "pro_european_middle_class": 6, "young_voters": -4, "urban_liberals": -5}
+      "national": {
+        "security_risk": -10,
+        "military_readiness": 20,
+        "eu_relations": 5,
+        "budget_deficit": 0.4,
+        "social_tension": 5
+      },
+      "voter_effects": {
+        "nationalists": 10,
+        "pro_european_middle_class": 6,
+        "young_voters": -4,
+        "urban_liberals": -5
+      }
     },
-    "coalition_support": {"green_future": 35, "social_democrats": 55, "liberal_democrats": 85},
-    "opposition_support": {"citizens_union": 75, "national_front": 60},
+    "coalition_support": {
+      "green_future": 35,
+      "social_democrats": 55,
+      "liberal_democrats": 85
+    },
+    "opposition_support": {
+      "citizens_union": 75,
+      "national_front": 60
+    },
     "news_pass": "NATO defense target commitment becomes law. GF stages symbolic protest. NATO allies pleased.",
     "news_fail": "Defense bill fails. GF and some SD MPs vote against in protest.",
     "ai_description": "Important for NATO relations and security. GF strongly opposed to military spending."
@@ -391,13 +716,560 @@
     "parliament_difficulty": 58,
     "implementation_turns": 4,
     "effects_on_pass": {
-      "national": {"eu_relations": 18, "democratic_quality": 5, "rule_of_law": 5, "political_capital": -3, "foreign_investment": 8},
-      "voter_effects": {"pro_european_middle_class": 15, "young_voters": 10, "urban_liberals": 10, "nationalists": -15}
+      "national": {
+        "eu_relations": 18,
+        "democratic_quality": 5,
+        "rule_of_law": 5,
+        "political_capital": -3,
+        "foreign_investment": 8
+      },
+      "voter_effects": {
+        "pro_european_middle_class": 15,
+        "young_voters": 10,
+        "urban_liberals": 10,
+        "nationalists": -15
+      }
     },
-    "coalition_support": {"green_future": 88, "social_democrats": 65, "liberal_democrats": 85},
-    "opposition_support": {"citizens_union": 30, "national_front": 3},
+    "coalition_support": {
+      "green_future": 88,
+      "social_democrats": 65,
+      "liberal_democrats": 85
+    },
+    "opposition_support": {
+      "citizens_union": 30,
+      "national_front": 3
+    },
     "news_pass": "EU integration package passes. NF and some CU MPs walk out. Brussels praises 'commitment to European values.'",
     "news_fail": "EU integration package fails. Nationalist pressure caused key MPs to abstain.",
     "ai_description": "Strongly pro-EU. Boost to EU relations but NF will campaign against it hard."
+  },
+  {
+    "id": "civil_service_reform",
+    "title": "Civil Service Modernization Act",
+    "description": "End political appointments below ministerial level. Merit-based hiring, transparent salaries, performance reviews.",
+    "type": "institutional",
+    "category": "governance",
+    "political_capital_cost": 9,
+    "budget_cost": 0.1,
+    "parliament_difficulty": 55,
+    "implementation_turns": 5,
+    "effects_on_pass": {
+      "national": {
+        "corruption": -6,
+        "rule_of_law": 5,
+        "democratic_quality": 4,
+        "eu_relations": 5
+      }
+    },
+    "coalition_support": {
+      "green_future": 85,
+      "social_democrats": 60,
+      "liberal_democrats": 75
+    },
+    "opposition_support": {
+      "citizens_union": 18,
+      "national_front": 12
+    },
+    "news_pass": "Civil service reform passes. Patronage networks shaken. Reform groups celebrate.",
+    "news_fail": "Civil service reform blocked. Bureaucracy lobbied hard.",
+    "ai_description": "Strikes at clientelism. Hard but high-impact."
+  },
+  {
+    "id": "freedom_of_information",
+    "title": "Freedom of Information Act",
+    "description": "Force ministries to publish budgets, contracts, and decisions online within 30 days. Whistleblower protections.",
+    "type": "institutional",
+    "category": "governance",
+    "political_capital_cost": 8,
+    "budget_cost": 0.06,
+    "parliament_difficulty": 52,
+    "implementation_turns": 3,
+    "effects_on_pass": {
+      "national": {
+        "corruption": -7,
+        "media_freedom": 8,
+        "democratic_quality": 6,
+        "public_trust": 4
+      }
+    },
+    "coalition_support": {
+      "green_future": 90,
+      "social_democrats": 80,
+      "liberal_democrats": 75
+    },
+    "opposition_support": {
+      "citizens_union": 25,
+      "national_front": 30
+    },
+    "news_pass": "FOI law passes. Government data must be public within 30 days. Journalists ecstatic.",
+    "news_fail": "FOI bill blocked by 'concerns over national security exemptions.'",
+    "ai_description": "Major transparency win. Civil society allies love it."
+  },
+  {
+    "id": "lobbying_register",
+    "title": "Lobbying Transparency Register",
+    "description": "Mandatory public register of all paid lobbyists, their meetings with officials, and the topics discussed.",
+    "type": "anti_corruption",
+    "category": "governance",
+    "political_capital_cost": 7,
+    "budget_cost": 0.03,
+    "parliament_difficulty": 60,
+    "implementation_turns": 2,
+    "effects_on_pass": {
+      "national": {
+        "corruption": -5,
+        "democratic_quality": 5,
+        "eu_relations": 4
+      }
+    },
+    "coalition_support": {
+      "green_future": 92,
+      "social_democrats": 70,
+      "liberal_democrats": 60
+    },
+    "opposition_support": {
+      "citizens_union": 15,
+      "national_front": 25
+    },
+    "news_pass": "Lobbying register law passes. Behind-closed-doors meetings now public record.",
+    "news_fail": "Lobbying register defeated after intense behind-the-scenes resistance.",
+    "ai_description": "Annoys opaque interest groups. EU loves it."
+  },
+  {
+    "id": "tech_innovation_fund",
+    "title": "Technology Innovation Fund",
+    "description": "€300M startup ecosystem fund. Tax breaks for R&D, university partnerships, talent visas.",
+    "type": "economic",
+    "category": "economy",
+    "political_capital_cost": 7,
+    "budget_cost": 0.4,
+    "parliament_difficulty": 40,
+    "implementation_turns": 8,
+    "effects_on_pass": {
+      "national": {
+        "gdp_growth": 0.4,
+        "unemployment": -0.5,
+        "foreign_investment": 8,
+        "business_confidence": 6
+      },
+      "voter_effects": {
+        "young_voters": 8,
+        "pro_european_middle_class": 6
+      }
+    },
+    "coalition_support": {
+      "green_future": 70,
+      "social_democrats": 55,
+      "liberal_democrats": 90
+    },
+    "opposition_support": {
+      "citizens_union": 50,
+      "national_front": 30
+    },
+    "news_pass": "Tech innovation fund signed. Capital city startups celebrate. Brain drain may reverse.",
+    "news_fail": "Tech innovation bill defeated. Tech lobby angry.",
+    "ai_description": "Great for capital region. Younger voters love it."
+  },
+  {
+    "id": "agricultural_subsidies",
+    "title": "Rural Agricultural Support Package",
+    "description": "Direct payments to small farmers, drought insurance, farm-to-table program, EU-aligned organic certification.",
+    "type": "economic",
+    "category": "economy",
+    "political_capital_cost": 7,
+    "budget_cost": 0.5,
+    "parliament_difficulty": 35,
+    "implementation_turns": 6,
+    "effects_on_pass": {
+      "national": {
+        "budget_deficit": 0.4,
+        "public_trust": 5
+      },
+      "regions": {
+        "southern_fields": {
+          "unrest": -10,
+          "party_support_da": 6,
+          "infrastructure": 5
+        },
+        "mountain_region": {
+          "unrest": -6,
+          "party_support_da": 4
+        }
+      },
+      "voter_effects": {
+        "rural_conservatives": 12,
+        "pensioners": 4
+      }
+    },
+    "coalition_support": {
+      "green_future": 60,
+      "social_democrats": 80,
+      "liberal_democrats": 65
+    },
+    "opposition_support": {
+      "citizens_union": 75,
+      "national_front": 65
+    },
+    "news_pass": "Rural agricultural package passes broad support. Farmers grateful.",
+    "news_fail": "Agricultural support bill failed. Farm lobby fuming.",
+    "ai_description": "Easy political win. Helps rural regions you usually lose."
+  },
+  {
+    "id": "small_business_tax_relief",
+    "title": "Small Business Tax Relief Act",
+    "description": "Cut SME corporate tax to 8% for first 3 years, simplify VAT for micro-enterprises, fast-track licensing.",
+    "type": "economic",
+    "category": "economy",
+    "political_capital_cost": 8,
+    "budget_cost": 0.3,
+    "parliament_difficulty": 45,
+    "implementation_turns": 4,
+    "effects_on_pass": {
+      "national": {
+        "gdp_growth": 0.3,
+        "unemployment": -0.3,
+        "business_confidence": 8,
+        "budget_deficit": 0.2
+      },
+      "voter_effects": {
+        "small_business_owners": 15,
+        "rural_conservatives": 4
+      }
+    },
+    "coalition_support": {
+      "green_future": 50,
+      "social_democrats": 35,
+      "liberal_democrats": 95
+    },
+    "opposition_support": {
+      "citizens_union": 70,
+      "national_front": 50
+    },
+    "news_pass": "Small business tax break signed. Chambers of commerce ecstatic.",
+    "news_fail": "Small business tax relief blocked. SD voted against citing 'gift to capital.'",
+    "ai_description": "LD demand. Boosts small business voters significantly."
+  },
+  {
+    "id": "banking_oversight",
+    "title": "Banking Sector Oversight Reform",
+    "description": "Strengthen bank capital requirements, beneficial ownership disclosure, anti-laundering audits.",
+    "type": "economic",
+    "category": "economy",
+    "political_capital_cost": 9,
+    "budget_cost": 0.08,
+    "parliament_difficulty": 58,
+    "implementation_turns": 4,
+    "effects_on_pass": {
+      "national": {
+        "corruption": -5,
+        "rule_of_law": 6,
+        "foreign_investment": 5,
+        "elite_conflict": 8,
+        "eu_relations": 6
+      }
+    },
+    "coalition_support": {
+      "green_future": 75,
+      "social_democrats": 70,
+      "liberal_democrats": 70
+    },
+    "opposition_support": {
+      "citizens_union": 25,
+      "national_front": 35
+    },
+    "news_pass": "Banking oversight law tightens controls. Banking sector grumbles, EU pleased.",
+    "news_fail": "Banking oversight bill blocked. Bank lobby celebrated.",
+    "ai_description": "Cleans up financial sector. Useful preemptively against banking crises."
+  },
+  {
+    "id": "childcare_program",
+    "title": "Universal Childcare Program",
+    "description": "Free childcare for under-3s, expanded kindergartens, parental leave benefits.",
+    "type": "social_policy",
+    "category": "social",
+    "political_capital_cost": 9,
+    "budget_cost": 0.55,
+    "parliament_difficulty": 45,
+    "implementation_turns": 8,
+    "effects_on_pass": {
+      "national": {
+        "public_trust": 7,
+        "social_tension": -6,
+        "budget_deficit": 0.4
+      },
+      "voter_effects": {
+        "young_voters": 10,
+        "industrial_workers": 6,
+        "public_sector_employees": 8
+      }
+    },
+    "coalition_support": {
+      "green_future": 95,
+      "social_democrats": 95,
+      "liberal_democrats": 50
+    },
+    "opposition_support": {
+      "citizens_union": 30,
+      "national_front": 40
+    },
+    "news_pass": "Universal childcare program enacted. Working families cheer. Birth rate watchers hopeful.",
+    "news_fail": "Childcare program bill defeated. LD pulled support over budget concerns.",
+    "ai_description": "Massive trust boost with families. Expensive."
+  },
+  {
+    "id": "housing_fund",
+    "title": "Affordable Housing Investment Fund",
+    "description": "Build 50,000 affordable housing units in 5 years, rent control in capital, mortgage support for first-time buyers.",
+    "type": "social_policy",
+    "category": "social",
+    "political_capital_cost": 10,
+    "budget_cost": 0.55,
+    "parliament_difficulty": 50,
+    "implementation_turns": 12,
+    "effects_on_pass": {
+      "national": {
+        "public_trust": 8,
+        "social_tension": -8,
+        "budget_deficit": 0.45
+      },
+      "regions": {
+        "capital": {
+          "unrest": -10,
+          "party_support_da": 6
+        },
+        "port_industrial": {
+          "infrastructure": 5
+        }
+      },
+      "voter_effects": {
+        "young_voters": 12,
+        "industrial_workers": 8,
+        "public_sector_employees": 6
+      }
+    },
+    "coalition_support": {
+      "green_future": 90,
+      "social_democrats": 85,
+      "liberal_democrats": 50
+    },
+    "opposition_support": {
+      "citizens_union": 30,
+      "national_front": 35
+    },
+    "news_pass": "Housing investment fund passes. 50K affordable units pledged. Capital tenants celebrate.",
+    "news_fail": "Housing fund blocked. Real estate lobby quietly relieved.",
+    "ai_description": "Major win in capital region. Long implementation but big payoff."
+  },
+  {
+    "id": "mental_health_act",
+    "title": "Mental Health & Addiction Services Act",
+    "description": "Triple national mental health funding, addiction recovery centers, school-based counseling.",
+    "type": "social_policy",
+    "category": "social",
+    "political_capital_cost": 7,
+    "budget_cost": 0.3,
+    "parliament_difficulty": 38,
+    "implementation_turns": 6,
+    "effects_on_pass": {
+      "national": {
+        "public_trust": 6,
+        "social_tension": -5,
+        "budget_deficit": 0.25
+      },
+      "voter_effects": {
+        "young_voters": 10,
+        "urban_liberals": 6,
+        "public_sector_employees": 4
+      }
+    },
+    "coalition_support": {
+      "green_future": 95,
+      "social_democrats": 90,
+      "liberal_democrats": 65
+    },
+    "opposition_support": {
+      "citizens_union": 50,
+      "national_front": 35
+    },
+    "news_pass": "Mental health services law passes broad coalition. Long-overdue, advocates say.",
+    "news_fail": "Mental health bill failed. Surprise rare opposition from health ministry insiders.",
+    "ai_description": "Easy popular win, especially with younger voters."
+  },
+  {
+    "id": "border_security",
+    "title": "Border Security & Migration Management Act",
+    "description": "Modernize border crossings, biometric controls, asylum processing centers, EU-aligned migration policy.",
+    "type": "security",
+    "category": "defense",
+    "political_capital_cost": 8,
+    "budget_cost": 0.35,
+    "parliament_difficulty": 48,
+    "implementation_turns": 6,
+    "effects_on_pass": {
+      "national": {
+        "security_risk": -8,
+        "eu_relations": 6,
+        "budget_deficit": 0.25
+      },
+      "regions": {
+        "eastern_border": {
+          "unrest": -10,
+          "party_support_da": 5
+        }
+      },
+      "voter_effects": {
+        "nationalists": 8,
+        "rural_conservatives": 5,
+        "urban_liberals": -3
+      }
+    },
+    "coalition_support": {
+      "green_future": 35,
+      "social_democrats": 60,
+      "liberal_democrats": 80
+    },
+    "opposition_support": {
+      "citizens_union": 70,
+      "national_front": 65
+    },
+    "news_pass": "Border security law signed. Eastern border modernization begins. NF claims credit.",
+    "news_fail": "Border security bill failed. GF voted against citing detention concerns.",
+    "ai_description": "Helps border region and eats into NF's signature issue."
+  },
+  {
+    "id": "cybersecurity_act",
+    "title": "National Cybersecurity Framework",
+    "description": "Critical infrastructure protection, mandatory breach reporting, national CERT, cyber-defense reservists.",
+    "type": "security",
+    "category": "defense",
+    "political_capital_cost": 7,
+    "budget_cost": 0.25,
+    "parliament_difficulty": 40,
+    "implementation_turns": 5,
+    "effects_on_pass": {
+      "national": {
+        "security_risk": -6,
+        "military_readiness": 5,
+        "eu_relations": 5,
+        "business_confidence": 4
+      }
+    },
+    "coalition_support": {
+      "green_future": 70,
+      "social_democrats": 75,
+      "liberal_democrats": 85
+    },
+    "opposition_support": {
+      "citizens_union": 75,
+      "national_front": 50
+    },
+    "news_pass": "Cybersecurity framework law passes broad support. NATO partners praise alignment.",
+    "news_fail": "Cybersecurity bill failed despite cross-party support — partisan procedural issues.",
+    "ai_description": "Easy bipartisan win. Useful preemptively against cyber events."
+  },
+  {
+    "id": "carbon_tax",
+    "title": "Carbon Pricing Act",
+    "description": "Phased carbon tax on heavy industry, revenue rebated to households, CBAM aligned with EU.",
+    "type": "environmental",
+    "category": "energy",
+    "political_capital_cost": 11,
+    "budget_cost": -0.2,
+    "parliament_difficulty": 65,
+    "implementation_turns": 4,
+    "effects_on_pass": {
+      "national": {
+        "budget_deficit": -0.2,
+        "eu_relations": 10,
+        "energy_security": 4,
+        "elite_conflict": 8,
+        "business_confidence": -4
+      },
+      "voter_effects": {
+        "young_voters": 10,
+        "urban_liberals": 8,
+        "industrial_workers": -8,
+        "rural_conservatives": -5
+      }
+    },
+    "coalition_support": {
+      "green_future": 98,
+      "social_democrats": 50,
+      "liberal_democrats": 45
+    },
+    "opposition_support": {
+      "citizens_union": 15,
+      "national_front": 5
+    },
+    "news_pass": "Carbon pricing law enacted. EU compliance dramatically improved. Industry warns of layoffs.",
+    "news_fail": "Carbon pricing bill blocked. SD coal-region MPs voted against.",
+    "ai_description": "GF dream. SD will resist if industrial regions hurt."
+  },
+  {
+    "id": "trade_agreement_asia",
+    "title": "Asia-Pacific Trade Agreement Ratification",
+    "description": "Ratify reciprocal trade deal opening Asian markets to Pustinyakovo wine, tech, and agriculture.",
+    "type": "foreign_policy",
+    "category": "foreign",
+    "political_capital_cost": 7,
+    "budget_cost": 0.05,
+    "parliament_difficulty": 45,
+    "implementation_turns": 3,
+    "effects_on_pass": {
+      "national": {
+        "foreign_investment": 12,
+        "gdp_growth": 0.4,
+        "business_confidence": 8,
+        "eu_relations": -2
+      }
+    },
+    "coalition_support": {
+      "green_future": 60,
+      "social_democrats": 60,
+      "liberal_democrats": 90
+    },
+    "opposition_support": {
+      "citizens_union": 75,
+      "national_front": 35
+    },
+    "news_pass": "Asia-Pacific trade deal ratified. Exporters open champagne. Some EU concern.",
+    "news_fail": "Trade deal blocked. Protectionist bloc carried the day.",
+    "ai_description": "Boosts economy and foreign investment. Mild EU annoyance."
+  },
+  {
+    "id": "education_reform",
+    "title": "Comprehensive Education Reform Act",
+    "description": "Curriculum modernization, teacher salary 30% raise, vocational training expansion, university research grants.",
+    "type": "social_policy",
+    "category": "social",
+    "political_capital_cost": 11,
+    "budget_cost": 0.7,
+    "parliament_difficulty": 50,
+    "implementation_turns": 12,
+    "effects_on_pass": {
+      "national": {
+        "democratic_quality": 5,
+        "public_trust": 7,
+        "social_tension": -5,
+        "budget_deficit": 0.5
+      },
+      "voter_effects": {
+        "young_voters": 15,
+        "public_sector_employees": 14,
+        "pro_european_middle_class": 8
+      }
+    },
+    "coalition_support": {
+      "green_future": 95,
+      "social_democrats": 95,
+      "liberal_democrats": 70
+    },
+    "opposition_support": {
+      "citizens_union": 50,
+      "national_front": 30
+    },
+    "news_pass": "Sweeping education reform passes. Teachers celebrate 30% raise. Students await curriculum changes.",
+    "news_fail": "Education reform stalled. Coalition argued over budget.",
+    "ai_description": "Generational impact. Expensive. Long implementation."
   }
 ]
