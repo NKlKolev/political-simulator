@@ -1,0 +1,1601 @@
+[
+  {
+    "id": "energy_price_spike",
+    "title": "Energy Price Shock",
+    "description": "Global gas prices have surged 40% this month. Household heating bills are soaring. Opposition is demanding emergency subsidies. Your Finance Minister warns the budget cannot sustain open-ended support.",
+    "type": "economic",
+    "severity": 3,
+    "probability": 0.08,
+    "trigger_conditions": {"inflation": [">", 5], "energy_security": ["<", 65]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Launch emergency subsidy program (costly)",
+        "effects": {
+          "national": {"inflation": -1.5, "social_tension": -12, "public_trust": 5, "budget_deficit": 1.2, "eu_relations": -2, "political_capital": -8},
+          "voter_effects": {"pensioners": 8, "industrial_workers": 6, "small_business_owners": -4},
+          "news": "Government launches emergency energy subsidy worth millions. Opposition calls it 'election bribe.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Targeted aid only for the poorest households",
+        "effects": {
+          "national": {"inflation": -0.5, "social_tension": -5, "public_trust": 2, "budget_deficit": 0.4, "political_capital": -3},
+          "voter_effects": {"pensioners": 2, "industrial_workers": 1, "small_business_owners": 2, "pro_european_middle_class": 3},
+          "news": "Government opts for targeted energy support. Middle class angry at being excluded."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Reject subsidies — let the market adjust",
+        "effects": {
+          "national": {"inflation": 0.2, "social_tension": 15, "public_trust": -8, "budget_deficit": 0, "political_capital": -5, "eu_relations": 3},
+          "voter_effects": {"pensioners": -10, "industrial_workers": -8, "small_business_owners": 3},
+          "news": "PM refuses energy subsidies. Protests planned. National Front calls it 'betrayal of working families.'"
+        }
+      },
+      {
+        "id": "d",
+        "text": "Negotiate emergency gas deal with eastern supplier",
+        "effects": {
+          "national": {"inflation": -1.0, "social_tension": -8, "eu_relations": -12, "energy_security": 15, "political_capital": -5},
+          "voter_effects": {"nationalists": 8, "pro_european_middle_class": -10, "urban_liberals": -8},
+          "news": "Government signs emergency energy deal. EU officials 'concerned.' Opposition cheers."
+        }
+      }
+    ]
+  },
+  {
+    "id": "corruption_minister",
+    "title": "Minister Corruption Leak",
+    "description": "An investigative journalist has published recordings allegedly showing your Regional Development Minister discussing diversion of EU infrastructure funds to a party-linked construction firm. The recording quality is unclear but media coverage is massive.",
+    "type": "corruption",
+    "severity": 4,
+    "probability": 0.07,
+    "trigger_conditions": {"corruption": [">", 45]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fire the minister immediately and open investigation",
+        "effects": {
+          "national": {"corruption": -8, "public_trust": 10, "democratic_quality": 5, "political_capital": -12, "coalition_loyalty": -5},
+          "voter_effects": {"urban_liberals": 12, "pro_european_middle_class": 8, "nationalists": -3},
+          "news": "PM fires Regional Minister over corruption recording. 'We have zero tolerance' says Markova."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Defend the minister — call the recording fabricated",
+        "effects": {
+          "national": {"corruption": 5, "public_trust": -15, "democratic_quality": -5, "media_freedom": -5, "political_capital": 3},
+          "voter_effects": {"urban_liberals": -15, "pro_european_middle_class": -10, "rural_conservatives": 2},
+          "news": "PM defends minister, claims recording is fake. Opposition demands resignation. Protests outside parliament."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Open quiet internal investigation, keep minister for now",
+        "effects": {
+          "national": {"corruption": 0, "public_trust": -5, "political_capital": -5},
+          "voter_effects": {"urban_liberals": -5, "pro_european_middle_class": -3},
+          "news": "PM orders internal review of corruption allegations. Opposition: 'fox guarding the henhouse.'"
+        }
+      },
+      {
+        "id": "d",
+        "text": "Ask prosecutor to investigate independently",
+        "effects": {
+          "national": {"corruption": -5, "public_trust": 7, "rule_of_law": 8, "political_capital": -8},
+          "voter_effects": {"urban_liberals": 8, "pro_european_middle_class": 6},
+          "news": "Prosecutor opens probe into Regional Minister. Government faces difficult weeks ahead."
+        }
+      }
+    ]
+  },
+  {
+    "id": "inflation_crisis",
+    "title": "Inflation Hits 10%",
+    "description": "Monthly inflation data shows prices have risen to double digits for the first time in 15 years. Bread and fuel prices are causing hardship across the country. Your finance team is divided on the response.",
+    "type": "economic",
+    "severity": 4,
+    "probability": 0.06,
+    "trigger_conditions": {"inflation": [">", 8]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Wage and price freeze for 3 months",
+        "effects": {
+          "national": {"inflation": -2.5, "social_tension": -10, "eu_relations": -5, "business_confidence": -8, "political_capital": -6},
+          "voter_effects": {"pensioners": 8, "industrial_workers": 6, "small_business_owners": -8},
+          "news": "Government announces emergency price controls. Business sector furious. IMF 'concerned.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Interest rate hike — coordinate with Central Bank",
+        "effects": {
+          "national": {"inflation": -1.8, "gdp_growth": -0.8, "unemployment": 1.2, "social_tension": 5, "eu_relations": 5, "political_capital": -4},
+          "voter_effects": {"pro_european_middle_class": 3, "small_business_owners": -3, "pensioners": -4, "industrial_workers": -5},
+          "news": "Central Bank raises rates to fight inflation. Mortgage holders face higher payments."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Emergency budget: cut spending to reduce demand",
+        "effects": {
+          "national": {"inflation": -1.2, "social_tension": 12, "public_trust": -8, "budget_deficit": -0.8, "gdp_growth": -0.5, "political_capital": -8},
+          "voter_effects": {"pensioners": -8, "public_sector_employees": -10, "industrial_workers": -6, "pro_european_middle_class": 2},
+          "news": "Emergency austerity measures announced. Public sector unions call general strike."
+        }
+      },
+      {
+        "id": "d",
+        "text": "Blame speculators and launch price-gouging investigation",
+        "effects": {
+          "national": {"inflation": -0.3, "social_tension": -3, "public_trust": 3, "democratic_quality": -3, "political_capital": 2},
+          "voter_effects": {"nationalists": 8, "industrial_workers": 5, "small_business_owners": -5, "pro_european_middle_class": -5},
+          "news": "PM blames 'profiteers' for inflation. Special task force announced. Economists skeptical."
+        }
+      }
+    ]
+  },
+  {
+    "id": "coalition_partner_demands",
+    "title": "Coalition Partner Issues Ultimatum",
+    "description": "The Social Democrats are threatening to leave the coalition unless you increase the minimum wage by 25% and reverse planned pension adjustments. Their leader has given you a 2-week deadline.",
+    "type": "political",
+    "severity": 3,
+    "probability": 0.08,
+    "trigger_conditions": {"coalition_loyalty_social_democrats": ["<", 55]},
+    "repeatable": true,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Agree to their demands fully",
+        "effects": {
+          "national": {"budget_deficit": 0.6, "political_capital": -5, "coalition_stability": 15, "inflation": 0.5},
+          "voter_effects": {"industrial_workers": 8, "public_sector_employees": 10, "pensioners": 5, "small_business_owners": -6},
+          "coalition_effects": {"social_democrats": {"loyalty": 20, "tension": -15}},
+          "news": "Government accepts Social Democrat wage demands. Business groups warn of economic damage."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Offer partial compromise (15% wage increase)",
+        "effects": {
+          "national": {"budget_deficit": 0.3, "political_capital": -3, "coalition_stability": 5},
+          "voter_effects": {"industrial_workers": 3, "public_sector_employees": 4},
+          "coalition_effects": {"social_democrats": {"loyalty": 8, "tension": -5}},
+          "news": "Government and Social Democrats reach partial wage deal. Coalition survives — for now."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Reject demands — call their bluff",
+        "effects": {
+          "national": {"coalition_stability": -20, "political_capital": 3},
+          "coalition_effects": {"social_democrats": {"loyalty": -25, "tension": 20}},
+          "news": "PM refuses Social Democrat ultimatum. Coalition in crisis. Early elections possible."
+        }
+      },
+      {
+        "id": "d",
+        "text": "Offer them a senior ministerial post instead",
+        "effects": {
+          "national": {"political_capital": -6, "coalition_stability": 8},
+          "coalition_effects": {"social_democrats": {"loyalty": 12, "tension": -8}},
+          "news": "PM reshuffles cabinet to include Social Democrat in key role. Party congress needed to approve."
+        }
+      }
+    ]
+  },
+  {
+    "id": "capital_protests",
+    "title": "Protests Erupt in Capital",
+    "description": "Tens of thousands have taken to the streets in Pustgrad protesting rising living costs and government corruption. The protest is peaceful but growing. Opposition parties are organizing support. Your Interior Minister asks for instructions.",
+    "type": "social",
+    "severity": 3,
+    "probability": 0.07,
+    "trigger_conditions": {"social_tension": [">", 55], "public_trust": ["<", 50]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Meet with protest leaders, offer dialogue",
+        "effects": {
+          "national": {"social_tension": -10, "public_trust": 8, "democratic_quality": 5, "political_capital": -3},
+          "voter_effects": {"young_voters": 10, "urban_liberals": 8},
+          "news": "PM agrees to meet protest leaders. Government signals openness to reform demands."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Ignore — wait for protests to fade",
+        "effects": {
+          "national": {"social_tension": 8, "public_trust": -5, "political_capital": 2},
+          "voter_effects": {"young_voters": -5, "urban_liberals": -8},
+          "news": "Government stays silent as protests continue. Opposition accuses PM of 'arrogance.'"
+        }
+      },
+      {
+        "id": "c",
+        "text": "Announce reform package to address grievances",
+        "effects": {
+          "national": {"social_tension": -15, "public_trust": 12, "democratic_quality": 3, "political_capital": -10, "budget_deficit": 0.3},
+          "voter_effects": {"young_voters": 12, "urban_liberals": 10, "pro_european_middle_class": 5},
+          "news": "PM announces reform program in response to protests. Details vague but tone conciliatory."
+        }
+      },
+      {
+        "id": "d",
+        "text": "Accuse foreign agents of funding protests",
+        "effects": {
+          "national": {"social_tension": 5, "public_trust": -8, "democratic_quality": -8, "eu_relations": -8, "political_capital": 3},
+          "voter_effects": {"nationalists": 10, "urban_liberals": -15, "pro_european_middle_class": -12},
+          "news": "PM claims protests organized by 'foreign-funded NGOs.' EU criticizes 'anti-democratic rhetoric.'"
+        }
+      }
+    ]
+  },
+  {
+    "id": "eu_rule_of_law",
+    "title": "EU Rule of Law Warning",
+    "description": "The European Commission has sent a formal letter warning that Pustinyakovo risks losing EU cohesion funds over concerns about judicial independence and procurement transparency. A response is required within 30 days.",
+    "type": "foreign_policy",
+    "severity": 3,
+    "probability": 0.06,
+    "trigger_conditions": {"eu_relations": ["<", 65], "rule_of_law": ["<", 55]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Commit to judicial reform roadmap",
+        "effects": {
+          "national": {"eu_relations": 15, "rule_of_law": 8, "democratic_quality": 5, "political_capital": -8},
+          "voter_effects": {"pro_european_middle_class": 12, "urban_liberals": 8, "nationalists": -8},
+          "news": "Government pledges judicial reform to EU. Nationalists condemn 'Brussels diktat.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Reject criticism as interference in sovereignty",
+        "effects": {
+          "national": {"eu_relations": -18, "political_capital": 5, "democratic_quality": -5},
+          "voter_effects": {"nationalists": 15, "pro_european_middle_class": -15, "urban_liberals": -12},
+          "news": "PM rejects EU criticism. Funding freeze possible. National Front cheers 'standing up to Brussels.'"
+        }
+      },
+      {
+        "id": "c",
+        "text": "Promise reforms but delay implementation",
+        "effects": {
+          "national": {"eu_relations": 3, "political_capital": -2},
+          "voter_effects": {"pro_european_middle_class": 2},
+          "news": "Government sends 'reassuring' letter to EU. Commission will monitor progress."
+        }
+      },
+      {
+        "id": "d",
+        "text": "Visit Brussels — personal diplomacy mission",
+        "effects": {
+          "national": {"eu_relations": 10, "political_capital": -5},
+          "voter_effects": {"pro_european_middle_class": 6, "urban_liberals": 4, "nationalists": -3},
+          "news": "PM flies to Brussels for talks. Government calls visit 'productive.' Opposition skeptical."
+        }
+      }
+    ]
+  },
+  {
+    "id": "factory_closure",
+    "title": "Major Factory Closure Announced",
+    "description": "The Severtsi Steel Plant — employing 4,200 workers in the Northern Industrial region — has announced closure due to energy costs and competition. Workers are blocking the gates. The region's MP is threatening to leave the coalition if nothing is done.",
+    "type": "economic",
+    "severity": 4,
+    "probability": 0.06,
+    "trigger_conditions": {"unemployment": [">", 15]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Nationalize the factory temporarily",
+        "effects": {
+          "national": {"budget_deficit": 0.8, "unemployment": -0.8, "eu_relations": -6, "political_capital": -6},
+          "regions": {"northern_industry": {"unemployment": -5, "unrest": -15, "party_support_da": 8}},
+          "voter_effects": {"industrial_workers": 15, "small_business_owners": -8, "pro_european_middle_class": -5},
+          "news": "Government nationalizes steel plant. Workers celebrate. EU concerned about state aid rules."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Emergency subsidies to keep it open 1 year",
+        "effects": {
+          "national": {"budget_deficit": 0.5, "unemployment": -0.4, "political_capital": -4},
+          "regions": {"northern_industry": {"unemployment": -3, "unrest": -10, "party_support_da": 5}},
+          "voter_effects": {"industrial_workers": 8},
+          "news": "Government offers factory rescue package. Criticism it delays inevitable closure."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Allow closure — invest in retraining program",
+        "effects": {
+          "national": {"unemployment": 1.2, "social_tension": 10, "political_capital": -3},
+          "regions": {"northern_industry": {"unemployment": 8, "unrest": 20, "party_support_da": -12}},
+          "voter_effects": {"industrial_workers": -15, "nationalists": -5},
+          "news": "Factory closes. Government promises 'retraining.' Workers call it 'abandonment.'"
+        }
+      },
+      {
+        "id": "d",
+        "text": "Find foreign investor — emergency investment mission",
+        "effects": {
+          "national": {"political_capital": -5, "foreign_investment": 8},
+          "regions": {"northern_industry": {"unrest": -8}},
+          "voter_effects": {"industrial_workers": 4},
+          "news": "PM launches foreign investor search for struggling plant. Timeline uncertain."
+        }
+      }
+    ]
+  },
+  {
+    "id": "media_attack",
+    "title": "Hostile Media Campaign Begins",
+    "description": "A major TV channel — linked to the Citizens' Union — has launched a prime-time series claiming government officials are coordinating with foreign NGOs to 'undermine national identity.' Your media advisor calls it a coordinated disinformation campaign.",
+    "type": "media",
+    "severity": 2,
+    "probability": 0.07,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Launch legal action against the broadcaster",
+        "effects": {
+          "national": {"media_freedom": -10, "public_trust": -3, "democratic_quality": -5, "political_capital": -4},
+          "voter_effects": {"urban_liberals": -8, "nationalists": 6},
+          "news": "Government sues broadcaster over 'disinformation.' Press freedom groups alarmed."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Hold press conference — counter with facts",
+        "effects": {
+          "national": {"public_trust": 5, "media_freedom": 2, "political_capital": -2},
+          "voter_effects": {"pro_european_middle_class": 5, "urban_liberals": 4},
+          "news": "PM holds detailed press conference rebutting media claims. Ratings split by party loyalty."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Ignore — it will blow over",
+        "effects": {
+          "national": {"public_trust": -5, "political_capital": 2},
+          "voter_effects": {"pro_european_middle_class": -3, "young_voters": -4},
+          "news": "Government silent on media attacks. Opposition campaign gaining momentum."
+        }
+      },
+      {
+        "id": "d",
+        "text": "Leak compromising information about media owner",
+        "effects": {
+          "national": {"media_freedom": -8, "public_trust": -3, "corruption": 3, "political_capital": 3},
+          "voter_effects": {"urban_liberals": -10, "nationalists": 5},
+          "news": "Leaked files on TV magnate emerge. Journalists question source. Government denies involvement."
+        }
+      }
+    ]
+  },
+  {
+    "id": "border_incident",
+    "title": "Border Incident with Neighbor",
+    "description": "Armed troops from the neighboring state briefly crossed into the Eastern Border region, claiming a 'navigational error.' Two border guards were briefly detained. The incident has inflamed nationalist sentiment. NATO allies are watching.",
+    "type": "security",
+    "severity": 4,
+    "probability": 0.04,
+    "trigger_conditions": {"security_risk": [">", 30]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Diplomatic protest — demand explanation and apology",
+        "effects": {
+          "national": {"security_risk": 5, "eu_relations": 3, "political_capital": -3},
+          "voter_effects": {"nationalists": -3, "pro_european_middle_class": 5},
+          "news": "Pustinyakovo files formal diplomatic protest over border incident. Awaiting neighbor's response."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Request NATO emergency consultation",
+        "effects": {
+          "national": {"security_risk": -5, "eu_relations": 8, "military_readiness": 5, "political_capital": -4},
+          "voter_effects": {"pro_european_middle_class": 8, "nationalists": 5, "urban_liberals": 5},
+          "news": "Pustinyakovo invokes NATO consultation clause. Alliance pledges solidarity. Russia condemns 'escalation.'"
+        }
+      },
+      {
+        "id": "c",
+        "text": "Escalate — mobilize border forces",
+        "effects": {
+          "national": {"security_risk": 12, "social_tension": 8, "military_readiness": 10, "eu_relations": -3, "political_capital": -5},
+          "voter_effects": {"nationalists": 18, "urban_liberals": -10, "young_voters": -8},
+          "news": "PM orders border force mobilization. Markets react badly. Military chiefs concerned about escalation."
+        }
+      },
+      {
+        "id": "d",
+        "text": "Downplay — accept their explanation quietly",
+        "effects": {
+          "national": {"security_risk": 0, "political_capital": 2},
+          "voter_effects": {"nationalists": -12, "rural_conservatives": -5},
+          "news": "Government accepts neighbor's 'navigation error' explanation. Opposition calls it humiliating."
+        }
+      }
+    ]
+  },
+  {
+    "id": "no_confidence_vote",
+    "title": "Opposition Files No-Confidence Motion",
+    "description": "The Citizens' Union and National Front have jointly filed a no-confidence motion citing the handling of the energy crisis and corruption allegations. They need only a few more votes to succeed. The vote is in 10 days.",
+    "type": "political",
+    "severity": 5,
+    "probability": 0.05,
+    "trigger_conditions": {"government_stability": ["<", 50]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fight the vote — whip coalition MPs hard",
+        "effects": {
+          "national": {"coalition_stability": -5, "government_stability": 10, "political_capital": -12},
+          "coalition_effects": {"social_democrats": {"loyalty": -5}, "green_future": {"loyalty": -3}},
+          "news": "Government survives no-confidence by 4 votes. Coalition shows cracks. PM calls it 'vindication.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Offer opposition a 'national unity' committee",
+        "effects": {
+          "national": {"government_stability": 5, "political_capital": -8, "democratic_quality": 5},
+          "news": "PM offers bipartisan unity deal. Some opposition MPs abstain. Vote fails narrowly."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Call early elections preemptively",
+        "effects": {
+          "national": {"government_stability": -20, "political_capital": -15, "election_early": true},
+          "news": "PM dissolves parliament and calls snap elections. Gamble on public verdict."
+        }
+      },
+      {
+        "id": "d",
+        "text": "Reshuffle cabinet to shore up support",
+        "effects": {
+          "national": {"government_stability": 8, "political_capital": -10},
+          "coalition_effects": {"social_democrats": {"loyalty": 8}, "liberal_democrats": {"loyalty": 5}},
+          "news": "PM reshuffles cabinet ahead of confidence vote. New faces in Finance and Interior."
+        }
+      }
+    ]
+  },
+  {
+    "id": "drought_agricultural",
+    "title": "Severe Drought in Southern Fields",
+    "description": "The worst drought in 20 years is devastating the Southern Fields region. Crops have failed across 40% of farmland. Farmers are demanding emergency compensation. The regional governor wants a disaster declaration.",
+    "type": "environmental",
+    "severity": 3,
+    "probability": 0.05,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Declare national disaster — full compensation package",
+        "effects": {
+          "national": {"budget_deficit": 0.4, "political_capital": -5, "public_trust": 5},
+          "regions": {"southern_fields": {"unrest": -15, "party_support_da": 8, "unemployment": -2}},
+          "voter_effects": {"rural_conservatives": 10},
+          "news": "Government declares agricultural disaster. Farmers get full compensation. Opposition grudgingly approves."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Partial aid — access EU agricultural emergency funds",
+        "effects": {
+          "national": {"eu_relations": 3, "political_capital": -3},
+          "regions": {"southern_fields": {"unrest": -8, "party_support_da": 3}},
+          "voter_effects": {"rural_conservatives": 4},
+          "news": "Government taps EU funds for drought victims. Farmers say it is 'too little, too late.'"
+        }
+      },
+      {
+        "id": "c",
+        "text": "Reject compensation — farmers should have insured crops",
+        "effects": {
+          "national": {"political_capital": 3, "public_trust": -5},
+          "regions": {"southern_fields": {"unrest": 20, "party_support_da": -12}},
+          "voter_effects": {"rural_conservatives": -15},
+          "news": "PM rejects drought aid. Farmers blockade highways. Citizens' Union pledges emergency bill."
+        }
+      }
+    ]
+  },
+  {
+    "id": "oligarch_meeting",
+    "title": "Secret Oligarch Meeting Revealed",
+    "description": "Photographs show a senior DA figure meeting privately with the country's most powerful oligarch — a man under corruption investigation. The meeting is claimed to be 'private.' Opposition is calling it a smoking gun.",
+    "type": "corruption",
+    "severity": 4,
+    "probability": 0.06,
+    "trigger_conditions": {"corruption": [">", 50]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Force the official to resign immediately",
+        "effects": {
+          "national": {"corruption": -5, "public_trust": 8, "political_capital": -8},
+          "voter_effects": {"urban_liberals": 10, "pro_european_middle_class": 8},
+          "news": "Official resigns after oligarch meeting scandal. PM: 'No one is above accountability.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Claim the meeting was 'accidental'",
+        "effects": {
+          "national": {"public_trust": -10, "corruption": 3, "political_capital": 2},
+          "voter_effects": {"urban_liberals": -10, "pro_european_middle_class": -8},
+          "news": "Government says oligarch meeting was 'coincidental.' Journalists publish phone records."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Announce anti-oligarchy legislation immediately",
+        "effects": {
+          "national": {"corruption": -8, "public_trust": 12, "political_capital": -10, "budget_deficit": 0.1},
+          "voter_effects": {"urban_liberals": 14, "pro_european_middle_class": 10, "small_business_owners": 5},
+          "news": "PM turns scandal into reform moment — announces anti-oligarch transparency law."
+        }
+      }
+    ]
+  },
+  {
+    "id": "general_strike",
+    "title": "General Strike Threatened",
+    "description": "The Confederation of Labor Unions has announced a 48-hour general strike in 2 weeks if the government does not agree to a 20% increase in the minimum wage. 800,000 workers could walk out.",
+    "type": "social",
+    "severity": 4,
+    "probability": 0.05,
+    "trigger_conditions": {"social_tension": [">", 60], "unemployment": [">", 14]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Negotiate — offer 15% increase over 2 years",
+        "effects": {
+          "national": {"social_tension": -12, "budget_deficit": 0.3, "inflation": 0.5, "political_capital": -5},
+          "voter_effects": {"industrial_workers": 10, "public_sector_employees": 8},
+          "coalition_effects": {"social_democrats": {"loyalty": 10}},
+          "news": "Government reaches deal with unions. Strike called off. Business groups warn of 'wage spiral.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Call their bluff — refuse to negotiate under threat",
+        "effects": {
+          "national": {"social_tension": 18, "public_trust": -8, "political_capital": 3},
+          "voter_effects": {"industrial_workers": -12, "small_business_owners": 5},
+          "news": "Strike goes ahead. Country partially paralyzed. PM seen as 'hardline.' Polls tumble."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Offer tax cuts to workers instead of wage rise",
+        "effects": {
+          "national": {"social_tension": -5, "budget_deficit": 0.2, "political_capital": -3},
+          "voter_effects": {"industrial_workers": 3, "small_business_owners": 4},
+          "news": "Government offers alternative to wage rise. Unions split — radical wing rejects, moderates consider."
+        }
+      }
+    ]
+  },
+  {
+    "id": "imf_pressure",
+    "title": "IMF Demands Fiscal Consolidation",
+    "description": "The IMF has published a country review warning that Pustinyakovo's deficit trajectory is unsustainable. They recommend cutting spending by 3% of GDP or raising taxes. Failure to act could affect credit rating.",
+    "type": "economic",
+    "severity": 4,
+    "probability": 0.05,
+    "trigger_conditions": {"budget_deficit": [">", 5], "public_debt": [">", 75]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accept IMF recommendations — austerity program",
+        "effects": {
+          "national": {"budget_deficit": -1.5, "public_debt": -3, "social_tension": 15, "public_trust": -8, "eu_relations": 8, "gdp_growth": -0.5},
+          "voter_effects": {"pensioners": -10, "public_sector_employees": -12, "pro_european_middle_class": 4},
+          "news": "Government announces austerity measures following IMF pressure. Unions plan protest. Markets rally."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Tax wealthy and corporations instead",
+        "effects": {
+          "national": {"budget_deficit": -0.8, "social_tension": -5, "public_trust": 5, "foreign_investment": -8, "eu_relations": -3},
+          "voter_effects": {"industrial_workers": 8, "public_sector_employees": 6, "small_business_owners": -10},
+          "news": "Government chooses tax-the-rich approach over cuts. Business groups threaten capital flight."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Reject IMF demands — maintain current course",
+        "effects": {
+          "national": {"eu_relations": -5, "foreign_investment": -10, "budget_deficit": 0.2},
+          "voter_effects": {"nationalists": 8, "pro_european_middle_class": -6},
+          "news": "PM rejects IMF demands as 'interference.' Credit rating watch negative. Opposition concerned."
+        }
+      }
+    ]
+  },
+  {
+    "id": "mp_defection",
+    "title": "MP Defects to National Front",
+    "description": "A senior DA backbencher has publicly announced he is joining the National Front, citing 'betrayal of traditional values' and 'surrender to Brussels.' He is the third DA MP to defect this year.",
+    "type": "political",
+    "severity": 3,
+    "probability": 0.06,
+    "trigger_conditions": {"faction_tension": [">", 50]},
+    "repeatable": true,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Publicly condemn defection — draw clear ideological line",
+        "effects": {
+          "national": {"political_capital": -3, "party_unity": -5},
+          "parties": {"democratic_alliance": {"seats": -1}, "national_front": {"seats": 1}},
+          "news": "PM attacks defector as 'opportunist.' DA draws ideological line. NF welcomes new member."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Appeal for unity — offer defector return deal",
+        "effects": {
+          "national": {"political_capital": -5, "party_unity": 5},
+          "news": "PM offers olive branch to defector. Party insiders divided on whether to 'forgive' him."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Investigate if NF bribed or blackmailed the MP",
+        "effects": {
+          "national": {"political_capital": -4, "democratic_quality": -3, "rule_of_law": -3},
+          "news": "Government opens probe into NF 'recruitment tactics.' NF calls it 'political persecution.'"
+        }
+      }
+    ]
+  },
+  {
+    "id": "eu_funds_windfall",
+    "title": "Major EU Development Funds Approved",
+    "description": "The European Commission has approved a €450 million infrastructure development package for Pustinyakovo. The funds must be spent on transport, green energy, and digital infrastructure within 5 years.",
+    "type": "foreign_policy",
+    "severity": 2,
+    "probability": 0.06,
+    "trigger_conditions": {"eu_relations": [">", 58]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Prioritize roads and railways in underdeveloped regions",
+        "effects": {
+          "national": {"infrastructure": 8, "political_capital": 5, "foreign_investment": 5},
+          "regions": {"northern_industry": {"infrastructure": 10, "unemployment": -3}, "mountain_region": {"infrastructure": 12}},
+          "voter_effects": {"rural_conservatives": 6, "industrial_workers": 5},
+          "news": "EU funds to boost Northern and Mountain region infrastructure. Regional mayors praise announcement."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Green energy transition — wind and solar",
+        "effects": {
+          "national": {"energy_security": 12, "eu_relations": 8, "inflation": -0.3, "political_capital": 5},
+          "voter_effects": {"young_voters": 10, "urban_liberals": 8, "green_future": 5},
+          "coalition_effects": {"green_future": {"loyalty": 15}},
+          "news": "Green energy investment package unveiled. GF celebrates. Industry region mayors protest."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Capital city digital transformation",
+        "effects": {
+          "national": {"political_capital": 5},
+          "regions": {"capital": {"infrastructure": 10, "party_support_da": 5}},
+          "voter_effects": {"young_voters": 8, "pro_european_middle_class": 10},
+          "news": "Digital hub investment for capital announced. Rural regions feel ignored."
+        }
+      }
+    ]
+  },
+  {
+    "id": "minister_health_scandal",
+    "title": "Health Ministry Pharmaceutical Deal Exposed",
+    "description": "Documents leaked to media show the Health Ministry paid 3x market price for vaccines from a company linked to a party donor. The deal was signed without competitive tender. Opposition is calling for a parliamentary investigation.",
+    "type": "corruption",
+    "severity": 4,
+    "probability": 0.06,
+    "trigger_conditions": {"corruption": [">", 40]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fire Health Minister, announce full audit",
+        "effects": {
+          "national": {"corruption": -8, "public_trust": 10, "political_capital": -10, "eu_relations": 3},
+          "news": "Health Minister dismissed over vaccine procurement scandal. Opposition: 'too little, too late.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Defend minister — claim deal was legitimate",
+        "effects": {
+          "national": {"corruption": 5, "public_trust": -12, "eu_relations": -5, "political_capital": 2},
+          "voter_effects": {"urban_liberals": -12, "pro_european_middle_class": -10},
+          "news": "PM defends Health Minister. Poll shows 72% believe deal was corrupt. EU asks for explanation."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Let the prosecutor decide — no political interference",
+        "effects": {
+          "national": {"rule_of_law": 8, "public_trust": 6, "political_capital": -4},
+          "news": "Government refers vaccine case to prosecutor. Reform groups cautiously optimistic."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ethnic_tension_valley",
+    "title": "Ethnic Tensions Rise in Minority Valley",
+    "description": "A series of incidents between ethnic majority and minority communities in Minority Valley has led to 3 nights of unrest. Local mayor is asking for police reinforcement. Nationalist parties are inflaming rhetoric online.",
+    "type": "social",
+    "severity": 4,
+    "probability": 0.05,
+    "trigger_conditions": {"ethnic_tension": [">", 50]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Send police — restore order firmly but fairly",
+        "effects": {
+          "national": {"social_tension": -8, "security_risk": -5, "democratic_quality": -2, "political_capital": -5},
+          "regions": {"minority_valley": {"unrest": -15, "ethnic_tension": -5}},
+          "voter_effects": {"ethnic_minorities": -3, "nationalists": 5},
+          "news": "Police deployed to Minority Valley. Order restored. Rights groups concerned about tactics."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Convene dialogue commission — minority and majority representatives",
+        "effects": {
+          "national": {"social_tension": -5, "democratic_quality": 8, "political_capital": -4},
+          "regions": {"minority_valley": {"unrest": -8, "ethnic_tension": -10}},
+          "voter_effects": {"ethnic_minorities": 10, "urban_liberals": 5, "nationalists": -8},
+          "news": "PM convenes ethnic reconciliation talks. National Front calls it 'pandering.' Progress slow."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Blame outside agitators — nationalist framing",
+        "effects": {
+          "national": {"social_tension": 5, "democratic_quality": -8, "eu_relations": -5},
+          "regions": {"minority_valley": {"unrest": 5, "ethnic_tension": 8}},
+          "voter_effects": {"nationalists": 12, "ethnic_minorities": -15, "urban_liberals": -10},
+          "news": "PM blames 'foreign-funded provocateurs' for unrest. EU minority rights monitor dispatched."
+        }
+      }
+    ]
+  },
+  {
+    "id": "journalist_threatened",
+    "title": "Investigative Journalist Receives Death Threats",
+    "description": "The journalist who broke the Regional Minister corruption story has received credible death threats and has temporarily left the country. Press freedom organizations are calling on the government to act. The trail leads to organized crime.",
+    "type": "media",
+    "severity": 4,
+    "probability": 0.05,
+    "trigger_conditions": {"media_freedom": ["<", 60], "corruption": [">", 50]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Assign police protection — investigate threatening network",
+        "effects": {
+          "national": {"media_freedom": 8, "rule_of_law": 5, "democratic_quality": 5, "political_capital": -4},
+          "voter_effects": {"urban_liberals": 10, "pro_european_middle_class": 8},
+          "news": "Government assigns protection to journalist, opens probe into threat network. Press groups cautiously praise."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Dismiss — say journalist should have been more careful",
+        "effects": {
+          "national": {"media_freedom": -12, "democratic_quality": -8, "eu_relations": -8, "public_trust": -5},
+          "voter_effects": {"urban_liberals": -15, "pro_european_middle_class": -12},
+          "news": "PM's comments on threatened journalist spark international outrage. EU condemns statement."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Use case to push for press freedom legislation",
+        "effects": {
+          "national": {"media_freedom": 12, "democratic_quality": 8, "eu_relations": 8, "political_capital": -6},
+          "voter_effects": {"urban_liberals": 14, "pro_european_middle_class": 10},
+          "news": "PM turns journalist case into press freedom push. Reform groups celebrate. Tabloids furious."
+        }
+      }
+    ]
+  },
+  {
+    "id": "budget_shortfall",
+    "title": "Tax Revenue Falls Short",
+    "description": "Tax collection for the quarter came in 12% below forecast due to economic slowdown. You face a projected budget shortfall of 2.1% of GDP above the EU limit. The Finance Minister presents three options.",
+    "type": "economic",
+    "severity": 3,
+    "probability": 0.07,
+    "trigger_conditions": {"gdp_growth": ["<", 2]},
+    "repeatable": true,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Emergency spending cuts across all ministries",
+        "effects": {
+          "national": {"budget_deficit": -0.8, "public_trust": -5, "social_tension": 8, "political_capital": -5},
+          "voter_effects": {"public_sector_employees": -8, "pensioners": -5},
+          "news": "Government announces 10% cuts across ministries. Public sector strikes announced."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Temporary tax on financial transactions",
+        "effects": {
+          "national": {"budget_deficit": -0.5, "foreign_investment": -6, "political_capital": -3},
+          "voter_effects": {"small_business_owners": -5, "pro_european_middle_class": -3},
+          "news": "Financial transaction tax passed. Business lobby angry. IMF 'concerned about precedent.'"
+        }
+      },
+      {
+        "id": "c",
+        "text": "Borrow — issue government bonds",
+        "effects": {
+          "national": {"public_debt": 2, "budget_deficit": 0, "eu_relations": -4},
+          "news": "Government issues emergency bonds to cover shortfall. Debt risk rising."
+        }
+      }
+    ]
+  },
+  {
+    "id": "spy_scandal",
+    "title": "Intelligence Chief Accused of Foreign Links",
+    "description": "An opposition MP has published documents suggesting the head of the State Intelligence Service has been meeting regularly with a foreign embassy without government knowledge. The documents appear authentic.",
+    "type": "security",
+    "severity": 4,
+    "probability": 0.04,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Fire intelligence chief — open investigation",
+        "effects": {
+          "national": {"security_risk": 8, "public_trust": 5, "political_capital": -8, "military_readiness": -3},
+          "news": "Intelligence chief fired over foreign contact allegations. Security vacuum feared by experts."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Stand by him — claim meetings were authorized",
+        "effects": {
+          "national": {"public_trust": -8, "eu_relations": -5, "political_capital": 2},
+          "voter_effects": {"pro_european_middle_class": -8, "urban_liberals": -10},
+          "news": "Government defends intelligence chief. Opposition produces second set of documents."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Request NATO allies to investigate jointly",
+        "effects": {
+          "national": {"security_risk": -5, "eu_relations": 8, "political_capital": -6},
+          "news": "NATO counter-intelligence team invited for joint review. Seen as sign of confidence in alliance."
+        }
+      }
+    ]
+  },
+  {
+    "id": "party_leadership_challenge",
+    "title": "Internal Leadership Challenge",
+    "description": "A senior DA figure has announced they will challenge Elena Markova at the party congress in 3 months. The challenger is more conservative and skeptical of the coalition with the Social Democrats.",
+    "type": "political",
+    "severity": 3,
+    "probability": 0.05,
+    "trigger_conditions": {"party_unity": ["<", 55], "public_trust": ["<", 42]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Welcome the challenge — show confidence",
+        "effects": {
+          "national": {"political_capital": -3, "party_unity": -8},
+          "news": "PM welcomes leadership contest. 'Democracy works inside and outside the party,' she says."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Move to secure delegates before congress",
+        "effects": {
+          "national": {"political_capital": -8, "party_unity": 5},
+          "news": "PM begins delegate consolidation effort. Party congress shaping up as crucial moment."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Offer challenger a senior cabinet post to drop bid",
+        "effects": {
+          "national": {"political_capital": -6, "party_unity": 10},
+          "news": "PM reshuffles cabinet. Challenger suspends leadership bid. 'Unity deal' suspected by press."
+        }
+      }
+    ]
+  },
+  {
+    "id": "referendum_demand",
+    "title": "Referendum on EU Integration Demanded",
+    "description": "The National Front has gathered 300,000 signatures demanding a referendum on Pustinyakovo's EU membership. Under the constitution, 400,000 signatures trigger mandatory parliamentary debate.",
+    "type": "political",
+    "severity": 3,
+    "probability": 0.04,
+    "trigger_conditions": {"eu_relations": ["<", 60]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Dismiss — petition doesn't meet threshold",
+        "effects": {
+          "national": {"political_capital": 2, "democratic_quality": -3},
+          "voter_effects": {"pro_european_middle_class": 3, "nationalists": -5},
+          "news": "Government rejects EU referendum petition on procedural grounds. NF: 'democracy under attack.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Hold the referendum — trust the people",
+        "effects": {
+          "national": {"political_capital": -8, "eu_relations": -15, "democratic_quality": 5},
+          "voter_effects": {"nationalists": 10, "pro_european_middle_class": -15, "urban_liberals": -12},
+          "news": "Referendum on EU membership called. Brussels alarmed. Markets react. Campaign begins."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Counter with pro-EU campaign and public debate",
+        "effects": {
+          "national": {"political_capital": -5, "eu_relations": 5, "democratic_quality": 5},
+          "voter_effects": {"pro_european_middle_class": 5, "nationalists": -3},
+          "news": "Government launches pro-EU information campaign in response to referendum demand."
+        }
+      }
+    ]
+  },
+  {
+    "id": "banking_crisis_warning",
+    "title": "Banking Sector Warning",
+    "description": "The Central Bank has issued a private warning that two mid-sized commercial banks are showing signs of stress. Non-performing loans are at record highs. If news leaks, a bank run could follow.",
+    "type": "economic",
+    "severity": 4,
+    "probability": 0.04,
+    "trigger_conditions": {"gdp_growth": ["<", 1.5], "public_debt": [">", 70]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Quietly arrange bank rescue — deposit guarantee",
+        "effects": {
+          "national": {"budget_deficit": 0.5, "public_trust": 3, "political_capital": -5},
+          "news": "Banking sector 'restructuring' announced. Opposition suspects hidden bailout."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Be transparent — announce support publicly",
+        "effects": {
+          "national": {"budget_deficit": 0.5, "public_trust": 8, "social_tension": 5, "political_capital": -5},
+          "news": "Government announces bank stability package. Lines form at ATMs briefly but settle. Honesty praised."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Allow market resolution — no bailout",
+        "effects": {
+          "national": {"gdp_growth": -1.2, "unemployment": 1.5, "social_tension": 15, "foreign_investment": -10},
+          "news": "Bank failure shocks economy. 28,000 depositors affected. Government faces crisis response demands."
+        }
+      }
+    ]
+  },
+  {
+    "id": "green_coalition_demand",
+    "title": "Green Future Threatens Over Coal Mine",
+    "description": "Green Future party leader Petko Zdravev has threatened to leave the coalition unless the government halts expansion of the Pernik coal mine, which is also the largest employer in the Mountain Region.",
+    "type": "political",
+    "severity": 3,
+    "probability": 0.06,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Halt the mine expansion",
+        "effects": {
+          "national": {"eu_relations": 8, "political_capital": -5},
+          "coalition_effects": {"green_future": {"loyalty": 20}},
+          "regions": {"mountain_region": {"unemployment": 5, "unrest": 15, "party_support_da": -8}},
+          "voter_effects": {"young_voters": 8, "urban_liberals": 6, "rural_conservatives": -8},
+          "news": "Mine expansion halted. GF stays in coalition. Mountain Region workers devastated."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Allow mine — offer GF renewable energy project instead",
+        "effects": {
+          "national": {"energy_security": 5, "eu_relations": -3, "political_capital": -3},
+          "coalition_effects": {"green_future": {"loyalty": -8}},
+          "news": "Mine proceeds. Government offers GF renewable consolation prize. GF splits internally."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Commission independent environmental review",
+        "effects": {
+          "national": {"political_capital": -2},
+          "coalition_effects": {"green_future": {"loyalty": 5}},
+          "news": "Environmental review ordered on coal mine. GF accepts, describes it as 'minimum requirement.'"
+        }
+      }
+    ]
+  },
+  {
+    "id": "cybersecurity_attack",
+    "title": "State Infrastructure Cyberattack",
+    "description": "A sophisticated cyberattack has disrupted government databases, the national electricity grid monitoring system, and the healthcare scheduling system. Intelligence services say the attack originated from foreign servers.",
+    "type": "security",
+    "severity": 4,
+    "probability": 0.04,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Publicly attribute attack — name the foreign actor",
+        "effects": {
+          "national": {"security_risk": 8, "eu_relations": 8, "political_capital": -3},
+          "voter_effects": {"nationalists": 5, "pro_european_middle_class": 5},
+          "news": "Government names foreign state behind cyberattack. Diplomatic crisis follows. NATO allies supportive."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Handle quietly — patch systems, don't escalate",
+        "effects": {
+          "national": {"security_risk": 3, "political_capital": 2},
+          "news": "Government confirms 'technical incident' affecting some services. Details vague. Press suspicious."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Request NATO cyber defense assistance",
+        "effects": {
+          "national": {"security_risk": -5, "military_readiness": 8, "eu_relations": 8, "political_capital": -3},
+          "voter_effects": {"pro_european_middle_class": 5},
+          "news": "NATO cyber team deployed to assist Pustinyakovo. Alliance solidarity displayed."
+        }
+      }
+    ]
+  },
+  {
+    "id": "pension_reform_pressure",
+    "title": "Pension System Crisis",
+    "description": "The Finance Ministry reveals the pension fund will be insolvent within 12 months at current rates. The options are: raise retirement age, cut pension values, increase contributions, or borrow. All options are politically toxic.",
+    "type": "economic",
+    "severity": 5,
+    "probability": 0.04,
+    "trigger_conditions": {"public_debt": [">", 72]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Gradually raise retirement age by 2 years",
+        "effects": {
+          "national": {"budget_deficit": -0.8, "social_tension": 15, "public_trust": -8, "political_capital": -10},
+          "voter_effects": {"pensioners": -5, "young_voters": 5, "industrial_workers": -8},
+          "news": "Retirement age to rise by 2 years. Unions call general strike. Opposition smells blood."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Increase worker and employer contributions",
+        "effects": {
+          "national": {"budget_deficit": -0.5, "social_tension": 10, "public_trust": -5, "political_capital": -8},
+          "voter_effects": {"industrial_workers": -8, "small_business_owners": -10},
+          "news": "Pension contribution hike announced. Business lobby warns of layoffs."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Take IMF loan specifically for pension stabilization",
+        "effects": {
+          "national": {"public_debt": 3, "budget_deficit": 0, "eu_relations": 3, "political_capital": -5},
+          "voter_effects": {"nationalists": -8},
+          "news": "Government borrows to save pensions. Opposition: 'mortgaging our children's future.'"
+        }
+      }
+    ]
+  },
+  {
+    "id": "election_commission_crisis",
+    "title": "Election Commission Accused of Bias",
+    "description": "Three election commission members have resigned, claiming the chair — appointed by the previous government — is systematically blocking reforms to vote registration that would enfranchise diaspora voters who favor your party.",
+    "type": "political",
+    "severity": 3,
+    "probability": 0.05,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Push for electoral commission reform immediately",
+        "effects": {
+          "national": {"democratic_quality": 8, "political_capital": -6, "rule_of_law": 5},
+          "voter_effects": {"urban_liberals": 8, "pro_european_middle_class": 6},
+          "news": "Government pushes electoral reform. Opposition says it's 'rigging the system in advance.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Negotiate cross-party agreement on new commission",
+        "effects": {
+          "national": {"democratic_quality": 5, "political_capital": -4},
+          "news": "Cross-party talks on election commission reform begin. Progress slow but positive."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Do nothing — don't provoke opposition on this",
+        "effects": {
+          "national": {"democratic_quality": -3, "political_capital": 2},
+          "news": "Election commission controversy fades. International monitors flag ongoing concerns."
+        }
+      }
+    ]
+  },
+  {
+    "id": "tourism_boom",
+    "title": "Record Tourism Season",
+    "description": "The Western Coast region is experiencing its best tourism season in history. Hotels are full. However, infrastructure cannot cope — beach pollution warnings are rising and locals are complaining about noise and traffic.",
+    "type": "economic",
+    "severity": 1,
+    "probability": 0.06,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Invest in coastal infrastructure",
+        "effects": {
+          "national": {"gdp_growth": 0.5, "budget_deficit": 0.2, "political_capital": -2},
+          "regions": {"western_coast": {"infrastructure": 10, "unrest": -5, "party_support_da": 4}},
+          "news": "Government announces coastal infrastructure investment. Tourism industry cheers."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Introduce tourism tax to fund local services",
+        "effects": {
+          "national": {"budget_deficit": -0.2, "eu_relations": 2, "political_capital": -2},
+          "regions": {"western_coast": {"infrastructure": 5, "unrest": -3}},
+          "voter_effects": {"small_business_owners": -4},
+          "news": "Tourism levy announced. Hotel owners angry. Revenue to fund local services."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Cap tourist numbers for environmental protection",
+        "effects": {
+          "national": {"gdp_growth": -0.2, "political_capital": -3},
+          "coalition_effects": {"green_future": {"loyalty": 10}},
+          "regions": {"western_coast": {"unrest": -5}},
+          "news": "Tourism cap shocks industry. GF celebrates. Hotel federation calls it 'economic sabotage.'"
+        }
+      }
+    ]
+  },
+  {
+    "id": "natural_disaster_flood",
+    "title": "Major Flooding in Port Region",
+    "description": "Catastrophic flooding has struck the Port & Trade Zone following a week of unprecedented rainfall. 12,000 people have been evacuated. The port has suspended operations. Damage is estimated at hundreds of millions.",
+    "type": "environmental",
+    "severity": 4,
+    "probability": 0.03,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Declare national emergency — full state response",
+        "effects": {
+          "national": {"budget_deficit": 0.4, "public_trust": 12, "social_tension": -8, "political_capital": 5},
+          "regions": {"port_industrial": {"unrest": -20, "infrastructure": -5, "party_support_da": 8}},
+          "news": "PM visits flooded region. Government declares emergency. Military deployed. International aid arrives."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Coordinate with EU for disaster funding",
+        "effects": {
+          "national": {"eu_relations": 8, "budget_deficit": 0.2, "political_capital": 3},
+          "regions": {"port_industrial": {"unrest": -12, "infrastructure": -3}},
+          "news": "Government requests EU Solidarity Fund. Brussels responds positively. Recovery could take months."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Respond locally — no national declaration",
+        "effects": {
+          "national": {"public_trust": -8, "political_capital": 2},
+          "regions": {"port_industrial": {"unrest": 10, "party_support_da": -10}},
+          "news": "Government response to flooding called 'inadequate.' Flood victims furious. PM accused of being distant."
+        }
+      }
+    ]
+  },
+  {
+    "id": "constitutional_court_ruling",
+    "title": "Constitutional Court Blocks Major Law",
+    "description": "The Constitutional Court has ruled that your landmark anti-corruption transparency law is unconstitutional, citing privacy concerns. The ruling was 5-4. The dissenting judges published a scathing rebuke suggesting political pressure.",
+    "type": "political",
+    "severity": 4,
+    "probability": 0.05,
+    "trigger_conditions": {"rule_of_law": ["<", 60]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accept ruling — redraft the law with amendments",
+        "effects": {
+          "national": {"rule_of_law": 5, "public_trust": 2, "political_capital": -5},
+          "news": "Government accepts court ruling, pledges revised anti-corruption law. Process delayed by months."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Attack court publicly — call ruling political",
+        "effects": {
+          "national": {"rule_of_law": -10, "democratic_quality": -8, "eu_relations": -8, "political_capital": 3},
+          "voter_effects": {"urban_liberals": -10, "pro_european_middle_class": -8, "nationalists": 5},
+          "news": "PM attacks court ruling as 'politically motivated.' EU sounds alarm. Rule of law monitors activated."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Propose constitutional amendment to override the court",
+        "effects": {
+          "national": {"rule_of_law": -15, "democratic_quality": -12, "eu_relations": -12, "political_capital": -8},
+          "voter_effects": {"urban_liberals": -18, "nationalists": 8},
+          "news": "Government proposes court override amendment. International outrage. Opposition walks out of parliament."
+        }
+      }
+    ]
+  },
+  {
+    "id": "opposition_scandal_reveal",
+    "title": "Opposition Leader Scandal Emerges",
+    "description": "Leaked documents appear to show Boyan Tsonev (CU leader) received undeclared payments from a foreign-linked company. The documents came via anonymous source. Your media advisor is excited. Your legal advisor urges caution.",
+    "type": "political",
+    "severity": 3,
+    "probability": 0.05,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Refer to prosecutor — let law take its course",
+        "effects": {
+          "national": {"rule_of_law": 5, "public_trust": 5, "political_capital": -3},
+          "parties": {"citizens_union": {"poll": -3}},
+          "news": "Government refers Tsonev documents to prosecutor. Opposition cries political persecution."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Use documents in media — maximum political damage",
+        "effects": {
+          "national": {"democratic_quality": -5, "public_trust": -3, "political_capital": 5},
+          "parties": {"citizens_union": {"poll": -6}},
+          "voter_effects": {"urban_liberals": -5, "pro_european_middle_class": -3},
+          "news": "Government-linked media runs with Tsonev documents. Source remains anonymous. Authenticity disputed."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Do not use — too risky if documents are fake",
+        "effects": {
+          "national": {"political_capital": 2, "public_trust": 3},
+          "news": "Government declines to comment on leaked opposition documents. Restraint noted by press."
+        }
+      }
+    ]
+  },
+  {
+    "id": "foreign_investment_deal",
+    "title": "Major Foreign Investor Announces Interest",
+    "description": "A large international manufacturing company is considering building a €200M electric vehicle parts factory in Pustinyakovo that would employ 3,000 workers. They want tax incentives, land grants, and infrastructure guarantees.",
+    "type": "economic",
+    "severity": 2,
+    "probability": 0.07,
+    "trigger_conditions": {"foreign_investment": [">", 40]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accept all demands — full incentive package",
+        "effects": {
+          "national": {"foreign_investment": 15, "unemployment": -1.5, "gdp_growth": 0.8, "budget_deficit": 0.3, "political_capital": 5},
+          "regions": {"northern_industry": {"unemployment": -6, "party_support_da": 10}},
+          "news": "Landmark EV factory deal signed. 3,000 jobs announced. Opposition calls incentives 'giveaway.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Negotiate harder — reduce tax incentives",
+        "effects": {
+          "national": {"foreign_investment": 8, "unemployment": -0.8, "gdp_growth": 0.4, "political_capital": 2},
+          "news": "Modified factory deal agreed after tough negotiations. Fewer incentives, still 2,200 jobs."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Reject — concern about environmental impact",
+        "effects": {
+          "national": {"foreign_investment": -5, "political_capital": -3},
+          "coalition_effects": {"green_future": {"loyalty": 10}},
+          "voter_effects": {"urban_liberals": 3, "industrial_workers": -10},
+          "news": "Government declines factory deal citing environmental concerns. GF cheers. Workers furious."
+        }
+      }
+    ]
+  },
+  {
+    "id": "wine_tax_eu",
+    "title": "EU Imposes Wine Export Tariff",
+    "description": "A trade dispute has resulted in the EU imposing a temporary tariff on Pustinyakovo wine exports following allegations of state subsidy violations. The wine sector — key in Southern Fields — faces €80M in losses.",
+    "type": "economic",
+    "severity": 3,
+    "probability": 0.04,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Challenge the tariff through EU legal process",
+        "effects": {
+          "national": {"eu_relations": -3, "political_capital": -3},
+          "regions": {"southern_fields": {"unrest": -5}},
+          "news": "Government files WTO/EU challenge on wine tariff. Process could take 18 months."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Compensate wine producers directly from budget",
+        "effects": {
+          "national": {"budget_deficit": 0.2, "eu_relations": -2, "political_capital": -3},
+          "regions": {"southern_fields": {"unrest": -10, "party_support_da": 5}},
+          "voter_effects": {"rural_conservatives": 5},
+          "news": "Wine sector bailout announced. Farmers grateful. EU officials annoyed by subsidy."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Find alternative export markets in Asia",
+        "effects": {
+          "national": {"foreign_investment": 3, "gdp_growth": 0.2, "political_capital": -2},
+          "news": "Government launches wine export diversification to Asian markets. Initiative welcomed."
+        }
+      }
+    ]
+  },
+  {
+    "id": "early_election_temptation",
+    "title": "Polls Surge — Call Early Election?",
+    "description": "After a successful crisis response, polls show DA at 38% — highest in years. Your campaign manager says: 'If you call snap elections now, you can win a majority. Wait and the moment will pass.'",
+    "type": "political",
+    "severity": 2,
+    "probability": 0.04,
+    "trigger_conditions": {"public_trust": [">", 58]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Call early elections — capitalize on the surge",
+        "effects": {
+          "national": {"political_capital": -10, "government_stability": -20, "election_early": true},
+          "news": "PM dissolves parliament, calls snap election. Gamble on current popularity surge."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Stay the course — deliver on your mandate",
+        "effects": {
+          "national": {"political_capital": 3, "public_trust": 2},
+          "news": "PM rejects early election calls. 'We were elected to govern, not to exploit polls,' says Markova."
+        }
+      }
+    ]
+  },
+  {
+    "id": "port_corruption_bust",
+    "title": "Port Smuggling Network Exposed",
+    "description": "Police have uncovered a major smuggling ring operating through the Port & Trade Zone, with alleged links to the port authority and local officials. Three officials have been arrested. The port director has connections to the Citizens' Union.",
+    "type": "corruption",
+    "severity": 3,
+    "probability": 0.05,
+    "trigger_conditions": {},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "High-profile prosecution — maximum political use",
+        "effects": {
+          "national": {"corruption": -8, "rule_of_law": 5, "political_capital": 5, "democratic_quality": 3},
+          "parties": {"citizens_union": {"poll": -4}},
+          "news": "Government announces major anti-corruption prosecution. CU denies links to port scandal."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Let justice run its course quietly",
+        "effects": {
+          "national": {"corruption": -4, "rule_of_law": 3, "political_capital": -2},
+          "news": "Port smuggling case handed to regular prosecutors. Investigation expected to take months."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Use as leverage in coalition negotiations",
+        "effects": {
+          "national": {"corruption": 3, "rule_of_law": -5, "political_capital": 5, "democratic_quality": -5},
+          "news": "Opposition accuses government of 'selective prosecution' to gain leverage. Prosecutors report pressure."
+        }
+      }
+    ]
+  },
+  {
+    "id": "university_protest",
+    "title": "University Students Blockade Campuses",
+    "description": "Students across the country are blockading universities in protest against proposed education budget cuts and rising tuition fees. The movement is large, organized, and generating significant media attention.",
+    "type": "social",
+    "severity": 3,
+    "probability": 0.05,
+    "trigger_conditions": {"social_tension": [">", 50]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Reverse the cuts — full student demands",
+        "effects": {
+          "national": {"budget_deficit": 0.2, "social_tension": -15, "public_trust": 8, "political_capital": -5},
+          "voter_effects": {"young_voters": 18},
+          "news": "PM reverses education cuts after student protests. Youth surge in polls. IMF 'disappointed.'"
+        }
+      },
+      {
+        "id": "b",
+        "text": "Meet student representatives — partial compromise",
+        "effects": {
+          "national": {"social_tension": -8, "public_trust": 4, "budget_deficit": 0.1, "political_capital": -3},
+          "voter_effects": {"young_voters": 8},
+          "news": "Government meets student leaders, agrees partial rollback. Protests continue but peaceful."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Ignore — academic year pressure will end protests",
+        "effects": {
+          "national": {"social_tension": 8, "public_trust": -6, "political_capital": 2},
+          "voter_effects": {"young_voters": -12},
+          "news": "Government ignores student protests. Movement grows. National Front offers solidarity."
+        }
+      }
+    ]
+  },
+  {
+    "id": "good_economic_news",
+    "title": "GDP Growth Exceeds Expectations",
+    "description": "Quarterly GDP data shows 4.2% growth — well above the 2.1% forecast. Unemployment has also fallen slightly. Your Finance Minister wants to use this moment strategically.",
+    "type": "economic",
+    "severity": 1,
+    "probability": 0.07,
+    "trigger_conditions": {"gdp_growth": [">", 3]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Use surplus to reduce debt",
+        "effects": {
+          "national": {"public_debt": -2, "eu_relations": 5, "public_trust": 3, "political_capital": 2},
+          "voter_effects": {"pro_european_middle_class": 5, "small_business_owners": 4},
+          "news": "Windfall used for debt reduction. Finance Minister praised for prudence. Bond markets rally."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Distribute as tax cuts",
+        "effects": {
+          "national": {"budget_deficit": 0.3, "public_trust": 6, "gdp_growth": 0.3, "political_capital": 3},
+          "voter_effects": {"small_business_owners": 8, "young_voters": 5},
+          "news": "PM announces 'growth dividend' tax reduction. Opposition says it is 'electioneering.'"
+        }
+      },
+      {
+        "id": "c",
+        "text": "Increase public spending on healthcare and education",
+        "effects": {
+          "national": {"budget_deficit": 0.2, "public_trust": 8, "social_tension": -5, "political_capital": 4},
+          "voter_effects": {"public_sector_employees": 8, "pensioners": 5, "young_voters": 6},
+          "coalition_effects": {"social_democrats": {"loyalty": 10}},
+          "news": "Growth dividend invested in public services. Coalition united for once."
+        }
+      }
+    ]
+  },
+  {
+    "id": "amnesty_international_report",
+    "title": "Human Rights Report Critical of Pustinyakovo",
+    "description": "A major international human rights organization has released a report criticizing prison conditions, police brutality against protesters, and discrimination against the ethnic minority population.",
+    "type": "foreign_policy",
+    "severity": 3,
+    "probability": 0.04,
+    "trigger_conditions": {"democratic_quality": ["<", 62]},
+    "repeatable": false,
+    "choices": [
+      {
+        "id": "a",
+        "text": "Accept report findings — commit to reforms",
+        "effects": {
+          "national": {"democratic_quality": 8, "eu_relations": 6, "public_trust": 4, "political_capital": -5},
+          "voter_effects": {"urban_liberals": 8, "ethnic_minorities": 10},
+          "news": "Government accepts human rights criticism, announces reform package. Opposition skeptical."
+        }
+      },
+      {
+        "id": "b",
+        "text": "Attack report as politically motivated",
+        "effects": {
+          "national": {"democratic_quality": -5, "eu_relations": -8, "political_capital": 3},
+          "voter_effects": {"nationalists": 8, "urban_liberals": -12},
+          "news": "PM dismisses human rights report as 'foreign interference.' EU Parliament debate scheduled."
+        }
+      },
+      {
+        "id": "c",
+        "text": "Acknowledge partial concerns — quiet diplomatic engagement",
+        "effects": {
+          "national": {"democratic_quality": 3, "eu_relations": 3, "political_capital": -2},
+          "news": "Government meets human rights monitors privately. Limited commitments made."
+        }
+      }
+    ]
+  }
+]
